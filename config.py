@@ -12,8 +12,8 @@ rootURLs = [
 	"https://www.yahoo.com",
 	"https://www.reddit.com",
 	"http://www.cnn.com",
-	"https://www.facebook.com/",
-	"http://tuoitre.vn/",
+	"https://www.facebook.com",
+	"http://tuoitre.vn",
 	"http://www.ebay.com",
 	"https://en.wikipedia.org/wiki/Main_Page",
 	"https://austin.craigslist.org/"
