@@ -1,4 +1,5 @@
 #!/usr/bin/python
+# coding: utf-8
 import sys, getopt
 import re
 import random
@@ -48,7 +49,6 @@ def main():
         t.start()
         print rTime
         time.sleep(rTime)
-        t.close()
 
 # def worker(ip,add,num):
 #     os.system('curl --interface '+ ip + ' ' + add)
@@ -56,23 +56,24 @@ def workerNmap():
     ip = random.choice(config.ipList)
     ran = random.randint(0,6)
     if ran == 0:
-        os.system('nmap ' + ip)
+        os.system("nmap " + ip)
     elif ran == 1:
-        os.system('nmap –vv –n –sS ' + ip)
+        os.system("nmap –vv –n –sS " + ip)
     elif ran == 2:
-        os.system('nmap –vv –n –sT ' + ip)
+        os.system("nmap –vv –n –sT " + ip)
     elif ran == 3:
-        os.system('nmap –vv –n –sF ' + ip)
+        os.system("nmap –vv –n –sF " + ip)
     elif ran == 4:
-        os.system('nmap –vv –n –sU ' + ip)
+        os.system("nmap –vv –n –sU " + ip)
     elif ran == 5:
-        os.system('nmap –vv –sA ' + ip)
+        os.system("nmap –vv –sA " + ip)
     else:
-        os.system('nmap –vv –sP ' + ip)
+        os.system("nmap –vv –sP " + ip)
 def workerPing():
     ran = random.randint(0,20)
-    response = os.system("ping -c " + ran + " " + random.choice(config.ipList))
-def workerFTP();
+    response = os.system("ping -c " + str(ran) + " " + random.choice(config.ipList))
+
+def workerFTP():
     server = ftplib.FTP()
     server.connect(random.choice(config.ipList))
     ran = random.randint(1,20)

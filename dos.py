@@ -1,4 +1,4 @@
-import requests,sys, re,os,urllib, re
+import requests,sys, re,os,urllib
 m = re.compile(r'<div id="captcha"><img src="/test-zone/php/create_captcha\.php\?_CAPTCHA&(?P<t>[^"]+)" alt="captcha"></div><input id="sesid" name="sessid" type="hidden" value="(?P<x>[a-h0-9]+)">')
 
 url = "http://192.168.250.250/test-zone/php/form.php"
