@@ -16,6 +16,8 @@ def main():
     addressfile = config.userAgent
     print 'IP file is "', ipfile
     print 'Address file is "', addressfile
+    if os.path.exists("sqlmap"):
+        os.system("git clone https://github.com/sqlmapproject/sqlmap.git")
 #     try:
 #         opts, args = getopt.getopt(argv,"hi:a:",["ifile=","afile="])
 #     except getopt.GetoptError:
