@@ -18,8 +18,8 @@ def main(argv):
     mType = ""
     numTime = ""
     numWorker = ""
-    if os.path.exists("sqlmap") == False:
-        os.system("git clone https://github.com/sqlmapproject/sqlmap.git")
+    # if os.path.exists("sqlmap") == False:
+    #     os.system("git clone https://github.com/sqlmapproject/sqlmap.git")
     try:
         opts, args = getopt.getopt(argv,"hc:t:w",["type=","hours=","worker="])
     except getopt.GetoptError:
@@ -35,21 +35,25 @@ def main(argv):
             numTime = arg
         elif opt in ("-w", "--worker"):
             numWorker = arg
+    print "Type: "+ str(mType) + "Time: " + str(numTime) + "Worker: " + str(numWorker)
     start_time = time.time()
     end_time = start_time + float(numTime)
     while True:
         now_time = time.time()
-        if mType == 0:
+        if mType == '0':
             t = threading.Thread(target=workerNormal)
             t.start()
-        elif mType == 1:
+        elif mType == '1':
+            print "---"
             trafficGenerator(0,5)
-        elif mType == 2:
+        elif mType == '2':
             trafficGenerator(numWorker,numWorker)
         if now_time > end_time:
+            print "Finish"
             break
 def trafficGenerator(ranType1,ranType2):
     ran = random.randint(ranType1,ranType2)
+    print ran
     if ran == 0:
         t = threading.Thread(target=workerNmap)
     elif ran == 1:
