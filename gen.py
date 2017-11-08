@@ -11,7 +11,7 @@ def doRequest(url):
 	if config.debug:
 		print "requesting: %s" % url
 	
-	headers = {'user-agent': config.userAgent}
+	headers = {'user-agent': random.choice(config.userAgent)}
 	
 	try:
 		r = requests.get(url, headers=headers)

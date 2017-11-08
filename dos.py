@@ -1,20 +1,20 @@
-import requests,sys, re,os,urllib
-m = re.compile(r'<div id="captcha"><img src="/test-zone/php/create_captcha\.php\?_CAPTCHA&(?P<t>[^"]+)" alt="captcha"></div><input id="sesid" name="sessid" type="hidden" value="(?P<x>[a-h0-9]+)">')
+import requests,sys, re,os,urllib,config,random
+m = re.compile(r'<div id="captcha"><img src="/egov/php/create_captcha\.php\?_CAPTCHA&(?P<t>[^"]+)" alt="captcha"></div><input id="sesid" name="sessid" type="hidden" value="(?P<x>[a-h0-9]+)">')
 
-url = "http://192.168.250.250/test-zone/php/form.php"
+url = "http://192.168.250.250/egov/php/form.php"
 while 1:
 	head = {
 	'Host': '192.168.250.250',
-	'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:55.0) Gecko/20100101 Firefox/55.0',
+	'User-Agent': random.choice(config.userAgent),
 	'Accept': '*/*',
 	'Accept-Language': 'en-US,en;q=0.5',
-	'Referer': 'http://192.168.250.250/test-zone/register.html'
+	'Referer': 'http://192.168.250.250/egov/register.html'
 	}
-	rx = requests.get("http://192.168.250.250/test-zone/register.html", headers=head)
+	rx = requests.get("http://192.168.250.250/egov/register.html", headers=head)
 	ix = m.search(rx.content).group('t')
 	sessid = m.search(rx.content).group('x')
 	cx = rx.cookies
-	urlx = "http://192.168.250.250/test-zone/php/create_captcha.php?_CAPTCHA&" + ix
+	urlx = "http://192.168.250.250/egov/php/create_captcha.php?_CAPTCHA&" + ix
 	# print url
 	rx = requests.get(urlx,headers = head,cookies=cx)
 	output = open("captcha.jpg","wb")
@@ -29,7 +29,7 @@ while 1:
 	#print "SESSID: ", sessid
 	#print captcha
 ##
-	urlcaptcha='http://192.168.250.250/test-zone/php/valid-captcha.php'
+	urlcaptcha='http://192.168.250.250/egov/php/valid-captcha.php'
 	payloadcaptcha = {'sessid': sessid, 'txtCaptcha': captcha}
 	vali = requests.post(urlcaptcha, data=payloadcaptcha)
 	#print vali.text

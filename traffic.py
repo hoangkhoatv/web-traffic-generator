@@ -9,49 +9,51 @@ import threading
 import config
 import ftplib
 import subprocess
+import time
 listIP = []
 listAdd = []
-def main():
+def main(argv):
     ipfile = config.rootURLs
     addressfile = config.userAgent
-    print 'IP file is "', ipfile
-    print 'Address file is "', addressfile
+    mType = ""
+    numTime = ""
     if os.path.exists("sqlmap") == False:
         os.system("git clone https://github.com/sqlmapproject/sqlmap.git")
-#     try:
-#         opts, args = getopt.getopt(argv,"hi:a:",["ifile=","afile="])
-#     except getopt.GetoptError:
-#         print 'traffic.py -i <ipfile> -a <addressfile>'
-#         sys.exit(2)
-#     for opt, arg in opts:
-#         if opt == '-h':
-#             print 'tracffic.py -i <ipfile> -oa<addressile>'
-#             sys.exit()
-#         elif opt in ("-i", "--ifile"):
-#             ipfile = arg
-#         elif opt in ("-a", "--afile"):
-#             addressfile = arg
-        
-#     print 'IP file is "', ipfile
-#     print 'Address file is "', addressfile
-#    readFile(ipfile,addressfile)
+    try:
+        opts, args = getopt.getopt(argv,"hc:t",["type=","hours="])
+    except getopt.GetoptError:
+        print 'traffic.py -c typeTraffic -t timeGenerate '
+        sys.exit(2)
+    for opt, arg in opts:
+        if opt == '-h':
+            print 'tracffic.py -c <type> -t <time>'
+            sys.exit()
+        elif opt in ("-c", "--type"):
+            mType = arg
+        elif opt in ("-t", "--hours"):
+            numTime = arg
+    start_time = time.time()
+    end_time = start_time + float(numTime)
     while True:
-        rTime = random.randint(20,40)
-        ran = random.randint(0,4)
-        if ran == 0:
-           t = threading.Thread(target=workerNmap)
-        elif ran == 1:
-            t = threading.Thread(target=workerPing)
-        elif ran == 2:
-            t = threading.Thread(target=workerFTP)
-        elif ran == 3:
-            t = threading.Thread(target=workerSqlmap)
-        else:
-            t = threading.Thread(target=workerWeb)
-        t.start()
-        print rTime
-        time.sleep(rTime)
-
+        now_time = time.time()
+        if mType == 0:
+            t = threading.Thread(target=workerNormal)
+            t.start()
+        elif mType == 1:
+            ran = random.randint(0,4)
+            if ran == 0:
+                t = threading.Thread(target=workerNmap)
+            elif ran == 1:
+                t = threading.Thread(target=workerPing)
+            elif ran == 2:
+                t = threading.Thread(target=workerFTP)
+            elif ran == 3:
+                t = threading.Thread(target=workerSqlmap)
+            else:
+                t = threading.Thread(target=workerWeb)
+            t.start()
+        if now_time > end_time:
+            break
 # def worker(ip,add,num):
 #     os.system('curl --interface '+ ip + ' ' + add)
 def workerNmap():
@@ -72,9 +74,10 @@ def workerNmap():
     else:
         os.system("nmap –vv –sP " + ip)
 def workerPing():
-    ran = random.randint(0,20)
+    ran = random.randint(1,20)
     response = os.system("ping -c " + str(ran) + " " + random.choice(config.ipList))
-
+def workerNormal():
+    os.system("curl -A '" +   random.choice(config.userAgent) + "' -O" + random.choice(config.urlWeb) )
 def workerFTP():
     server = ftplib.FTP()
     server.connect(random.choice(config.ipList))
@@ -86,7 +89,7 @@ def workerWeb():
     os.system('python dos.py 000000000 ' + str(rPacket))
 def workerSqlmap():
     p = subprocess.Popen("python sqlmap/sqlmap.py -u "+ random.choice(config.urlWeb) +"  --risk=3 --level=5 --batch", shell=True)
-    ran = random.randint(5,30)
+    ran = random.randint(5,20)
     time.sleep(ran)
     p.kill()
 
@@ -110,4 +113,4 @@ def workerSqlmap():
 #     for line in file2:
 #         listAdd.append(line.strip())
 if __name__ == "__main__":
-   main()
+   main(sys.argv[1:])
