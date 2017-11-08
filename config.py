@@ -3,9 +3,7 @@ minWait = 5 # minimum amount of time allowed between HTTP requests
 maxWait = 10 # maximum amount of time to wait between HTTP requests
 debug = False # set to True to enable useful console output
 
-# use this single item list to test how a site responds to this crawler
-# be sure to comment out the list below it.
-#rootURLs = ["https://digg.com/"] 
+
 
 rootURLs = [
 	"https://digg.com/",
@@ -18,15 +16,17 @@ rootURLs = [
 	"https://en.wikipedia.org/wiki/Main_Page",
 	"https://austin.craigslist.org/",
 	"http://dangkyhochieu.dientap.cnsc",
+	"http://noithat.dientap.cnsc",
 	"https://world.taobao.com",
 	"http://kenh14.vn",
+	'oneshop.dientap.cnsc',
 	"https://www.amazon.com",
 	"http://kbsworld.kbs.co.kr",
-	"https://tiki.vn"
+	"https://tiki.vn",
+	"https://www.youtube.com"
 	]
 
 
-# items can be a URL "https://t.co" or simple string to check for "amazon"
 blacklist = [
 	"https://t.co", 
 	"t.umblr.com", 
@@ -82,4 +82,20 @@ userAgent = ['Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) ',
 	'Mozilla/5.0 (CrKey armv7l 1.5.16041) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.0 Safari/537.36',
 	'Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; Xbox; Xbox One) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Mobile Safari/537.36 Edge/13.10586',
 	'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)'
+]
+
+urlDNS = [
+	'dangkyhochieu.dientap.cnsc',
+	'noithat.dientap.cnsc',
+	'oneshop.dientap.cnsc',
+	'smc.dientap.cnsc',
+	'travelblog.dientap.cnsc',
+	'splunk.dientap.cnsc'
+]
+ipDNS = [
+	'192.168.250.250',
+	'192.168.250.245',
+	'192.168.250.240',
+	'172.16.20.10',
+	'192.168.250.248'
 ]

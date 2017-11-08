@@ -17,10 +17,11 @@ def main(argv):
     addressfile = config.userAgent
     mType = ""
     numTime = ""
+    numWorker = ""
     if os.path.exists("sqlmap") == False:
         os.system("git clone https://github.com/sqlmapproject/sqlmap.git")
     try:
-        opts, args = getopt.getopt(argv,"hc:t",["type=","hours="])
+        opts, args = getopt.getopt(argv,"hc:t:w",["type=","hours=","worker="])
     except getopt.GetoptError:
         print 'traffic.py -c typeTraffic -t timeGenerate '
         sys.exit(2)
@@ -32,6 +33,8 @@ def main(argv):
             mType = arg
         elif opt in ("-t", "--hours"):
             numTime = arg
+        elif opt in ("-w", "--worker"):
+            numWorker = arg
     start_time = time.time()
     end_time = start_time + float(numTime)
     while True:
@@ -40,22 +43,27 @@ def main(argv):
             t = threading.Thread(target=workerNormal)
             t.start()
         elif mType == 1:
-            ran = random.randint(0,4)
-            if ran == 0:
-                t = threading.Thread(target=workerNmap)
-            elif ran == 1:
-                t = threading.Thread(target=workerPing)
-            elif ran == 2:
-                t = threading.Thread(target=workerFTP)
-            elif ran == 3:
-                t = threading.Thread(target=workerSqlmap)
-            else:
-                t = threading.Thread(target=workerWeb)
-            t.start()
+            trafficGenerator(0,5)
+        elif mType == 2:
+            trafficGenerator(numWorker,numWorker)
         if now_time > end_time:
             break
-# def worker(ip,add,num):
-#     os.system('curl --interface '+ ip + ' ' + add)
+def trafficGenerator(ranType1,ranType2):
+    ran = random.randint(ranType1,ranType2)
+    if ran == 0:
+        t = threading.Thread(target=workerNmap)
+    elif ran == 1:
+        t = threading.Thread(target=workerPing)
+    elif ran == 2:
+        t = threading.Thread(target=workerFTP)
+    elif ran == 3:
+        t = threading.Thread(target=workerSqlmap)
+    elif ran == 4:
+        t = threading.Thread(target=workerDns)
+    else:
+        t = threading.Thread(target=workerWeb)
+    t.start()
+
 def workerNmap():
     ip = random.choice(config.ipList)
     ran = random.randint(0,6)
@@ -92,7 +100,9 @@ def workerSqlmap():
     ran = random.randint(5,20)
     time.sleep(ran)
     p.kill()
-
+def workerDns():
+    os.system("nslookup -type=any " + random.choice(config.urlDNS))
+    os.system("nslookup -type=any " + random.choice(config.ipDNS))
 # def extractIPs(fileContent):
 #     pattern = r"((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)([ (\[]?(\.|dot)[ )\]]?(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3})"
 #     ips = [each[0] for each in re.findall(pattern, fileContent)]   
