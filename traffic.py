@@ -103,7 +103,7 @@ def workerWeb():
     rPacket = random.randint(0,100)
     os.system('python dos.py 000000000 ' + str(rPacket))
 def workerSqlmap():
-    p = subprocess.Popen("python /web/sqlmap/sqlmap.py -u "+ random.choice(config.urlDKHC) +"  --risk=3 --level=5 --batch", shell=True)
+    p = subprocess.Popen("python /web/sqlmap/sqlmap.py -u '"+ random.choice(config.urlDKHC) +"'  --risk=3 --level=5 --batch", shell=True)
     ran = random.randint(5,20)
     time.sleep(ran)
     p.kill()
