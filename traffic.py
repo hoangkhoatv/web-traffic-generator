@@ -91,9 +91,15 @@ def workerPing():
     ran = random.randint(1,20)
     response = os.system("ping -c " + str(ran) + " " + random.choice(config.ipList))
 def workerNormal():
-    os.system("curl -A '" +   random.choice(config.userAgent) + "' -o " + random.choice(config.urlDKHC) )
-    os.system("curl -A '" +   random.choice(config.userAgent) + "' -o " + random.choice(config.urlOneShop) )
-    os.system("curl -A '" +   random.choice(config.userAgent) + "' -o " + random.choice(config.urlNoiThat) )
+    p1 = subprocess.Popen("curl -A '" +   random.choice(config.userAgent) + "' -o " + random.choice(config.urlDKHC), shell=True)
+    p2 = subprocess.Popen("curl -A '" +   random.choice(config.userAgent) + "' -o " + random.choice(config.urlOneShop), shell=True)
+    p3 = subprocess.Popen("curl -A '" +   random.choice(config.userAgent) + "' -o " + random.choice(config.urlNoiThat), shell=True)
+    ran = random.randint(5,20)
+    time.sleep(ran)
+    p1.kill()
+    p2.kill()
+    p3.kill()
+    
 def workerFTP():
     server = ftplib.FTP()
     server.connect(random.choice(config.ipList))
