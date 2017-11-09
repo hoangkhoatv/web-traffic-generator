@@ -18,8 +18,8 @@ def main(argv):
     mType = ""
     numTime = ""
     numWorker = ""
-    # if os.path.exists("sqlmap") == False:
-    #     os.system("git clone https://github.com/sqlmapproject/sqlmap.git")
+    if os.path.exists("sqlmap") == False:
+        os.system("git clone https://github.com/sqlmapproject/sqlmap.git")
     try:
         opts, args = getopt.getopt(argv,"hc:t:w",["type=","hours=","worker="])
     except getopt.GetoptError:
@@ -44,7 +44,6 @@ def main(argv):
             t = threading.Thread(target=workerNormal)
             t.start()
         elif mType == '1':
-            print "---"
             trafficGenerator(0,5)
         elif mType == '2':
             trafficGenerator(numWorker,numWorker)
@@ -66,6 +65,8 @@ def trafficGenerator(ranType1,ranType2):
         t = threading.Thread(target=workerDns)
     else:
         t = threading.Thread(target=workerWeb)
+        t1 = threading.Thread(target=workerNormal)
+        t1.start()
     t.start()
 
 def workerNmap():
@@ -89,7 +90,9 @@ def workerPing():
     ran = random.randint(1,20)
     response = os.system("ping -c " + str(ran) + " " + random.choice(config.ipList))
 def workerNormal():
-    os.system("curl -A '" +   random.choice(config.userAgent) + "' -O" + random.choice(config.urlWeb) )
+    os.system("curl -A '" +   random.choice(config.userAgent) + "' -O" + random.choice(config.urlDKHC) )
+    os.system("curl -A '" +   random.choice(config.userAgent) + "' -O" + random.choice(config.urlOneShop) )
+    os.system("curl -A '" +   random.choice(config.userAgent) + "' -O" + random.choice(config.urlNoiThat) )
 def workerFTP():
     server = ftplib.FTP()
     server.connect(random.choice(config.ipList))
