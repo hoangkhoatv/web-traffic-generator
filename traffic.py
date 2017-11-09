@@ -46,7 +46,7 @@ def main(argv):
         elif mType == '1':
             trafficGenerator(0,5)
         elif mType == '2':
-            trafficGenerator(int(numWorker),int(numWorker)
+            trafficGenerator(int(numWorker),int(numWorker))
         if now_time > end_time:
             print "Finish"
             break
@@ -103,7 +103,7 @@ def workerWeb():
     rPacket = random.randint(0,100)
     os.system('python dos.py 000000000 ' + str(rPacket))
 def workerSqlmap():
-    p = subprocess.Popen("python /web/sqlmap/sqlmap.py -u "+ random.choice(config.urlWeb) +"  --risk=3 --level=5 --batch", shell=True)
+    p = subprocess.Popen("python /web/sqlmap/sqlmap.py -u "+ random.choice(config.urlDKHC) +"  --risk=3 --level=5 --batch", shell=True)
     ran = random.randint(5,20)
     time.sleep(ran)
     p.kill()
