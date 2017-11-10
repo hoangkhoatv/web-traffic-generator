@@ -17,12 +17,14 @@ rootURLs = [
 	"http://www.ebay.com",
 	"https://en.wikipedia.org/wiki/Main_Page",
 	"https://austin.craigslist.org/",
-	"http://dangkyhochieu.dientap.cnsc",
 	"https://world.taobao.com",
 	"http://kenh14.vn",
 	"https://www.amazon.com",
 	"http://kbsworld.kbs.co.kr",
-	"https://tiki.vn"
+	"https://tiki.vn",
+	"http://dangkyhochieu.dientap.cnsc/egov/php/login.php",
+	"http://dangkyhochieu.dientap.cnsc/egov/php/create_captcha.php",
+	"http://oneshop.dientap.cnsc/index.php"
 	]
 
 
@@ -68,9 +70,13 @@ ipList = [
 	"172.16.20.30"
     ]
 urlDKHC = [
-	"http://192.168.250.250/egov/check.html",
-	"http://192.168.250.250/egov/index.html",
-	"http://192.168.250.250/egov/register.html"
+	"http://dangkyhochieu.dientap.cnsc/egov/check.html",
+	"http://dangkyhochieu.dientap.cnsc/egov/index.html",
+	"http://dangkyhochieu.dientap.cnsc/egov/register.html",
+	"http://dangkyhochieu.dientap.cnsc/egov/hoidap.html",
+	"http://dangkyhochieu.dientap.cnsc/egov/php/login.php",
+	"http://dangkyhochieu.dientap.cnsc/egov/php/create_captcha.php",
+	"http://noithat.dientap.cnsc/index.html"
     ]
 
 urlDNS = [
