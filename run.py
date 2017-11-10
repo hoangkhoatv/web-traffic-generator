@@ -15,6 +15,6 @@ while True:
         for x in range(0,sl):
                 m = random.randint(1,9)
                 print 'RUN Ubuntu' +str(m)
-                os.system('docker exec -i -t -d ubuntu' + str(m) + ' bash -c ' + str("'") + "python /web/traffic.py --type " + str(type) + " --hours " + str(hours) + " --worker " + str(work)  + str("'"))
+                os.system('docker exec -i -t -d ubuntu' + str(m) + ' bash -c ' + str("'") + "python /web/traffic.py --type " + str(_type) + " --hours " + str(hours) + " --worker " + str(work)  + str("'"))
         time.sleep(hours)
 
