@@ -41,34 +41,52 @@ def main(argv):
     while True:
         now_time = time.time()
         if mType == '0':
-            t = threading.Thread(target=workerNormal)
+            t = threading.Thread(target=workerNormal, args = (10,))
             t.start()
         elif mType == '1':
-            trafficGenerator(0,5)
+            t = threading.Thread(target=workerNormal, args = (9,))
+            t.start()
+            trafficGenerator(0,5,1)
         elif mType == '2':
+            t = threading.Thread(target=workerNormal, args = (8,))
+            t.start()
+            trafficGenerator(0,5,2)
+        elif mType == '3':
+            t = threading.Thread(target=workerNormal, args = (7,))
+            t.start()
+            trafficGenerator(0,5,3)
+        elif mType == '4':
+            t = threading.Thread(target=workerNormal, args = (6,))
+            t.start()
+            trafficGenerator(0,5,4)
+        elif mType == '5':
+            t = threading.Thread(target=workerNormal, args = (5,))
+            t.start()
+            trafficGenerator(0,5,5)
+        elif mType == '6':
             trafficGenerator(int(numWorker),int(numWorker))
         if now_time > end_time:
             print "Finish"
             break
-        time.sleep(2)
-def trafficGenerator(ranType1,ranType2):
-    ran = random.randint(ranType1,ranType2)
-    print ran
-    if ran == 0:
-        t = threading.Thread(target=workerNmap)
-    elif ran == 1:
-        t = threading.Thread(target=workerPing)
-    elif ran == 2:
-        t = threading.Thread(target=workerFTP)
-    elif ran == 3:
-        t = threading.Thread(target=workerSqlmap)
-    elif ran == 4:
-        t = threading.Thread(target=workerDns)
-    else:
-        t = threading.Thread(target=workerWeb)
-        t1 = threading.Thread(target=workerNormal)
-        t1.start()
-    t.start()
+        time.sleep(numTime)
+def trafficGenerator(ranType1,ranType2,num):
+    for x in range(1,num):
+        ran = random.randint(ranType1,ranType2)
+        if ran == 0:
+            t = threading.Thread(target=workerNmap)
+        elif ran == 1:
+            t = threading.Thread(target=workerPing)
+        elif ran == 2:
+            t = threading.Thread(target=workerFTP)
+        elif ran == 3:
+            t = threading.Thread(target=workerSqlmap)
+        elif ran == 4:
+            t = threading.Thread(target=workerDns)
+        else:
+            t = threading.Thread(target=workerWeb)
+            t1 = threading.Thread(target=workerNormal)
+            t1.start()
+        t.start()
 
 def workerNmap():
     ip = random.choice(config.ipList)
@@ -90,15 +108,13 @@ def workerNmap():
 def workerPing():
     ran = random.randint(1,20)
     response = os.system("ping -c " + str(ran) + " " + random.choice(config.ipList))
-def workerNormal():
-    p1 = subprocess.Popen('curl -A "' +   random.choice(config.userAgent) + '" ' + random.choice(config.urlDKHC), shell=True)
-    p2 = subprocess.Popen('curl -A "' +   random.choice(config.userAgent) + '" ' + random.choice(config.urlOneShop), shell=True)
-    p3 = subprocess.Popen('curl -A "' +   random.choice(config.userAgent) + '" ' + random.choice(config.urlNoiThat), shell=True)
-    ran = random.randint(5,20)
-    time.sleep(ran)
-    p1.kill()
-    p2.kill()
-    p3.kill()
+def workerNormal(num):
+    for x in range(1,num):
+        subprocess.Popen('curl -A "' +   random.choice(config.userAgent) + '"' + random.choice(config.urlDKHC), shell=True)
+        subprocess.Popen('curl -A "' +   random.choice(config.userAgent) + '"' + random.choice(config.urlOneShop), shell=True)
+        subprocess.Popen('curl -A "' +   random.choice(config.userAgent) + '"' + random.choice(config.urlNoiThat), shell=True)
+        t = threading.Thread(target=workerWeb)
+        t.start()
 
 def workerFTP():
     server = ftplib.FTP()
@@ -107,11 +123,11 @@ def workerFTP():
     for x in range(0, ran):
         server.login('cnsc','123456')
 def workerWeb():
-    rPacket = random.randint(0,100)
+    rPacket = random.randint(10,100)
     os.system('python dos.py 000000000 ' + str(rPacket))
 def workerSqlmap():
     p = subprocess.Popen("python /web/sqlmap/sqlmap.py -u '"+ random.choice(config.urlDKHC) +"'  --risk=3 --level=5 --batch", shell=True)
-    ran = random.randint(5,20)
+    ran = random.randint(5,15)
     time.sleep(ran)
     p.kill()
 def workerDns():
