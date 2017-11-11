@@ -123,7 +123,7 @@ def workerFTP():
     for x in range(0, ran):
         server.login('cnsc','123456')
 def workerWeb():
-    rPacket = random.randint(10,100)
+    rPacket = random.randint(1,10)
     os.system('python /web/dos.py 000000000 ' + str(rPacket))
 def workerSqlmap():
     p = subprocess.Popen("python /web/sqlmap/sqlmap.py -u '"+ random.choice(config.urlDKHC) +"'  --risk=3 --level=5 --batch", shell=True)
