@@ -7,7 +7,7 @@ import control
 for x in range(1,10):
         os.system('docker start ubuntu'+ str(x))
 while True:
-        control.reload()
+        control = reload(control)
         _type = control.mType
         hours = control.mTime
         work = control.mWorker
