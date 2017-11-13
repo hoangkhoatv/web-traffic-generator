@@ -27,7 +27,7 @@ def main(argv):
         sys.exit(2)
     for opt, arg in opts:
         if opt == '-h':
-            print 'tracffic.py -c <type> -t <time>'
+            print 'traffic.py -c <type> -t <time>'
             sys.exit()
         elif opt in ("-c", "--type"):
             mType = arg
@@ -39,6 +39,7 @@ def main(argv):
     start_time = time.time()
     end_time = start_time + float(numTime)
     while True:
+        _file = open('run.txt','a')
         now_time = time.time()
         if mType == '0':
             t = threading.Thread(target=workerNormal, args = (10,))
@@ -133,24 +134,6 @@ def workerSqlmap():
 def workerDns():
     os.system("nslookup -type=any " + random.choice(config.urlDNS))
     os.system("nslookup -type=any " + random.choice(config.ipDNS))
-# def extractIPs(fileContent):
-#     pattern = r"((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)([ (\[]?(\.|dot)[ )\]]?(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3})"
-#     ips = [each[0] for each in re.findall(pattern, fileContent)]   
-#     for item in ips:
-#         location = ips.index(item)
-#         ip = re.sub("[ ()\[\]]", "", item)
-#         ip = re.sub("dot", ".", ip)
-#         ips.remove(item)
-#         ips.insert(location, ip) 
-#     return ips
 
-# def readFile(urlIp,urlAddress):
-#     file1 = open(urlIp,"r")
-#     for line in file1:
-#         listIP.append(line.strip())
-    
-#     file2 = open(urlAddress,"r")
-#     for line in file2:
-#         listAdd.append(line.strip())
 if __name__ == "__main__":
    main(sys.argv[1:])

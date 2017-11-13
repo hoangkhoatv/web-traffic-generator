@@ -4,18 +4,28 @@ import random
 import time
 import control
 
-for x in range(1,10):
-        os.system('docker start ubuntu'+ str(x))
+#for x in range(1,10):
+        #os.system('docker start ubuntu'+ str(x))
 while True:
         control = reload(control)
-        _type = control.mType
-        hours = control.mTime
-        work = control.mWorker
-        sl = random.randint(1,9)
-        print  'TYPE: ' + str(_type) + ' TIME: ' + str(hours) + ' SL: ' + str(sl) + ' WORKER: ' + str(work)
-        for x in range(0,sl):
-                m = random.randint(1,9)
-                print 'RUN Ubuntu' +str(m)
-                os.system('docker exec -i -t -d ubuntu' + str(m) + ' bash -c ' + str("'") + "python /web/traffic.py --type " + str(_type) + " --hours " + str(hours) + " --worker " + str(work)  + str("'"))
-        time.sleep(hours)
+        print "Status: " + str(control.status)
+        if control.status == 1:
+                _file = open('run.txt','a')
+                _type = control.mType
+                hours = control.mTime
+                work = control.mWorker
+                sl = control.numberIp
+                print  'TYPE: ' + str(_type) + ' TIME: ' + str(hours) + ' SL: ' + str(sl) + ' WORKER: ' + str(work)
+                _file.write(str(hours) + '\n')
+                _file.write(str(sl) + '\n')
+                for x in range(0,sl):
+                        m = random.randint(1,9)
+                        print 'RUN Ubuntu' +str(m)
+                        tRun = 'docker exec -i -t -d ubuntu' + str(m) + ' bash -c ' + str("'") + "python /web/traffic.py --type " + str(_type) + " --hours " + str(hours) + " --worker " + str(work)  + str("'")
+                        _file.write(tRun + '\n')
+                        # os.system(tRun)
+                _file.close()
+                time.sleep(hours)
+        time.sleep(2)
+       
 
