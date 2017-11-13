@@ -7,21 +7,22 @@ import time
 import os
 import threading
 import config
-import ftplib
 import subprocess
 import time
-listIP = []
-listAdd = []
+
+
 def main(argv):
     ipfile = config.rootURLs
     addressfile = config.userAgent
     mType = ""
     numTime = ""
     numWorker = ""
+    number = 0
+    list = []
     if os.path.exists("sqlmap") == False:
         os.system("git clone https://github.com/sqlmapproject/sqlmap.git")
     try:
-        opts, args = getopt.getopt(argv,"hc:t:w",["type=","hours=","worker="])
+        opts, args = getopt.getopt(argv,"hc:t:w:n",["type=","hours=","worker=","number="])
     except getopt.GetoptError:
         print 'traffic.py -c typeTraffic -t timeGenerate '
         sys.exit(2)
@@ -35,105 +36,140 @@ def main(argv):
             numTime = arg
         elif opt in ("-w", "--worker"):
             numWorker = arg
-    print "Type: "+ str(mType) + "Time: " + str(numTime) + "Worker: " + str(numWorker)
-    start_time = time.time()
-    end_time = start_time + float(numTime)
-    while True:
-        _file = open('run.txt','a')
-        now_time = time.time()
-        if mType == '0':
-            t = threading.Thread(target=workerNormal, args = (10,))
-            t.start()
-        elif mType == '1':
-            t = threading.Thread(target=workerNormal, args = (9,))
-            t.start()
-            trafficGenerator(0,5,1)
-        elif mType == '2':
-            t = threading.Thread(target=workerNormal, args = (8,))
-            t.start()
-            trafficGenerator(0,5,2)
-        elif mType == '3':
-            t = threading.Thread(target=workerNormal, args = (7,))
-            t.start()
-            trafficGenerator(0,5,3)
-        elif mType == '4':
-            t = threading.Thread(target=workerNormal, args = (6,))
-            t.start()
-            trafficGenerator(0,5,4)
-        elif mType == '5':
-            t = threading.Thread(target=workerNormal, args = (5,))
-            t.start()
-            trafficGenerator(0,5,5)
-        elif mType == '6':
-            trafficGenerator(int(numWorker),int(numWorker))
-        if now_time > end_time:
-            print "Finish"
-            break
-        time.sleep(numTime)
-def trafficGenerator(ranType1,ranType2,num):
+        elif opt in ("-n", "--number"):
+            number = arg
+    if mType == '0':
+        t = threading.Thread(target=workerNormal, args = (10,number,))
+        t.start()
+    elif mType == '1':
+        t = threading.Thread(target=workerNormal, args = (9,number,))
+        t.start()
+        trafficGenerator(0,6,1,number)
+    elif mType == '2':
+        t = threading.Thread(target=workerNormal, args = (8,number,))
+        t.start()
+        trafficGenerator(0,6,2,number)
+    elif mType == '3':
+        t = threading.Thread(target=workerNormal, args = (7,number,))
+        t.start()
+        trafficGenerator(0,6,3,number)
+    elif mType == '4':
+        t = threading.Thread(target=workerNormal, args = (6,number,))
+        t.start()
+        trafficGenerator(0,6,4,number)
+    elif mType == '5':
+        t = threading.Thread(target=workerNormal, args = (5,number,))
+        t.start()
+        trafficGenerator(0,6,5,number)
+    elif mType == '6':
+        trafficGenerator(int(numWorker),int(numWorker),10,number)
+    
+def trafficGenerator(ranType1,ranType2,num,number):
     for x in range(1,num):
         ran = random.randint(ranType1,ranType2)
         if ran == 0:
-            t = threading.Thread(target=workerNmap)
+            t = threading.Thread(target=workerNmap, args = (number,))
         elif ran == 1:
-            t = threading.Thread(target=workerPing)
+            t = threading.Thread(target=workerPing, args = (number,))
         elif ran == 2:
-            t = threading.Thread(target=workerFTP)
+            t = threading.Thread(target=workerFTP, args = (number,))
         elif ran == 3:
-            t = threading.Thread(target=workerSqlmap)
+            t = threading.Thread(target=workerSqlmap, args = (number,))
         elif ran == 4:
-            t = threading.Thread(target=workerDns)
-        else:
-            t = threading.Thread(target=workerWeb)
-            t1 = threading.Thread(target=workerNormal)
-            t1.start()
+            t = threading.Thread(target=workerDns, args = (number,))
+        elif ran == 5:
+            t = threading.Thread(target=workerWebDos, args = (number,))
         t.start()
 
-def workerNmap():
+def workerNmap(number):
     ip = random.choice(config.ipList)
     ran = random.randint(0,6)
-    if ran == 0:
-        os.system("nmap " + ip)
-    elif ran == 1:
-        os.system("nmap –vv –n –sS " + ip)
-    elif ran == 2:
-        os.system("nmap –vv –n –sT " + ip)
-    elif ran == 3:
-        os.system("nmap –vv –n –sF " + ip)
-    elif ran == 4:
-        os.system("nmap –vv –n –sU " + ip)
-    elif ran == 5:
-        os.system("nmap –vv –sA " + ip)
-    else:
-        os.system("nmap –vv –sP " + ip)
-def workerPing():
-    ran = random.randint(1,20)
-    response = os.system("ping -c " + str(ran) + " " + random.choice(config.ipList))
-def workerNormal(num):
-    for x in range(1,num):
-        subprocess.Popen('curl -A "' +   random.choice(config.userAgent) + '"' + random.choice(config.urlDKHC), shell=True)
-        subprocess.Popen('curl -A "' +   random.choice(config.userAgent) + '"' + random.choice(config.urlOneShop), shell=True)
-        subprocess.Popen('curl -A "' +   random.choice(config.userAgent) + '"' + random.choice(config.urlNoiThat), shell=True)
+    for x in range(random.ranint(10,20)):
+        if ran == 0:
+            strRun = "nmap " + ip
+        elif ran == 1:
+            strRun = "nmap –vv –n –sS " + ip
+        elif ran == 2:
+            strRun = "nmap –vv –n –sT " + ip
+        elif ran == 3:
+            strRun = "nmap –vv –n –sF " + ip
+        elif ran == 4:
+            strRun = "nmap –vv –n –sU " + ip
+        elif ran == 5:
+            strRun = "nmap –vv –sA " + ip
+        else:
+            strRun = "nmap –vv –sP " + ip
+        _file = open('traffic'+str(number)+'.txt','a')
+        _file.write(strRun + '\n')
+        _file.close()
+        os.system(strRun)
+def workerPing(number):
+    ran = random.randint(10,20)
+    response = "ping -c " + str(ran) + " " + random.choice(config.ipList)
+    _file = open('traffic'+str(number)+'.txt','a')
+    _file.write(response + '\n')
+    _file.close()
+    os.system(response)
+def workerNormal(num,number):
+    for x in range(10,10+num):
+        p1 = 'curl -A "' +   random.choice(config.userAgent) + '" ' + random.choice(config.urlDKHC)
+        p2 = 'curl -A "' +   random.choice(config.userAgent) + '" ' + random.choice(config.urlOneShop)
+        p3 = 'curl -A "' +   random.choice(config.userAgent) + '" ' + random.choice(config.urlNoiThat)
+        _file = open('traffic'+str(number)+'.txt','a')
+        _file.write(p1 + '\n')
+        _file.write(p2 + '\n')
+        _file.write(p3+ '\n')
+        _file.close()
+        subprocess.Popen(p1, shell=True)
+        subprocess.Popen(p2, shell=True)
+        subprocess.Popen(p3, shell=True)
         t = threading.Thread(target=workerWeb)
         t.start()
 
-def workerFTP():
-    server = ftplib.FTP()
-    server.connect(random.choice(config.ipList))
-    ran = random.randint(1,20)
+def workerFTP(number):
+    strRun = 'curl ftp://'+ random.choice(config.ipList) + ' --user cnsc:123456'
+    ran = random.randint(10,20)
     for x in range(0, ran):
-        server.login('cnsc','123456')
-def workerWeb():
-    rPacket = random.randint(1,10)
-    os.system('python /web/dos.py 000000000 ' + str(rPacket))
-def workerSqlmap():
-    p = subprocess.Popen("python /web/sqlmap/sqlmap.py -u '"+ random.choice(config.urlDKHC) +"'  --risk=3 --level=5 --batch", shell=True)
-    ran = random.randint(5,15)
-    time.sleep(ran)
+        _file = open('traffic'+str(number)+'.txt','a')
+        _file.write(strRun + '\n')
+        _file.close()
+        os.system(strRun)
+    
+        
+def workerWeb(number):  
+    cmnd = random.randint(100000000,999999999)
+    strRun = 'python /web/dos.py ' + str(cmnd) + ' ' + str(cmnd)
+    _file = open('traffic'+str(number)+'.txt','a')
+    _file.write(strRun + '\n')
+    _file.close()
+    os.system(strRun)
+
+def workerWebDos(number):  
+    cmnd = random.randint(100000000,999999999)
+    for x in range(0,random.randint(10,20)):
+        strRun = 'python /web/dos.py ' + str(cmnd) + ' ' + str(cmnd + x)
+        _file = open('traffic'+str(number)+'.txt','a')
+        _file.write(strRun + '\n')
+        _file.close()
+        os.system(strRun)
+def workerSqlmap(number):
+    _file = open('traffic'+str(number)+'.txt','a')
+    strRun = "python /web/sqlmap/sqlmap.py -u '"+ random.choice(config.urlDKHC) +"'  --risk=3 --level=5 --batch"
+    _file.write(strRun + '\n')
+    _file.close()
+    p = subprocess.Popen(strRun, shell=True)
+    time.sleep(10)
     p.kill()
-def workerDns():
-    os.system("nslookup -type=any " + random.choice(config.urlDNS))
-    os.system("nslookup -type=any " + random.choice(config.ipDNS))
+def workerDns(number):
+    for x in range(random.randint(10,20)):
+        n1 = "nslookup -type=any " + random.choice(config.urlDNS)
+        n2 = "nslookup -type=any " + random.choice(config.ipDNS)
+        _file = open('traffic'+str(number)+'.txt','a')
+        _file.write(n1 + '\n')
+        _file.write(n2 + '\n')
+        _file.close()    
+        os.system(n1)
+        os.system(n2)
 
 if __name__ == "__main__":
    main(sys.argv[1:])
