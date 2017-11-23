@@ -7,7 +7,7 @@ mType = 0
 # 4 : Thuong 6 - Doc 4
 # 5 : Thuong 5 - Doc 5
 # 6 : Traffic worker
-mTime = 10
+mTime = 40
 # Khoang cach thoi gian moi lan chay tool
 mWorker = 0
 # 1: Nmap
@@ -23,7 +23,8 @@ status = 1
 # 0: Tat
 # 1: Mo
 delay = [
-    1,
-    2,
-    3
+    5,
+    10,
+    15,
+    20
 ]
