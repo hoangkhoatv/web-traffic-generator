@@ -18,11 +18,12 @@ def main(argv):
     numTime = ""
     numWorker = ""
     number = 0
+    delay = 0
     list = []
-    if os.path.exists("sqlmap") == False:
-        os.system("git clone https://github.com/sqlmapproject/sqlmap.git")
+    # if os.path.exists("sqlmap") == False:
+    #     os.system("git clone https://github.com/sqlmapproject/sqlmap.git")
     try:
-        opts, args = getopt.getopt(argv,"hc:t:w:n",["type=","hours=","worker=","number="])
+        opts, args = getopt.getopt(argv,"hc:t:w:n:d",["type=","hours=","worker=","number=","delay="])
     except getopt.GetoptError:
         print 'traffic.py -c typeTraffic -t timeGenerate '
         sys.exit(2)
@@ -38,6 +39,8 @@ def main(argv):
             numWorker = arg
         elif opt in ("-n", "--number"):
             number = arg
+        elif opt in ("-d", "--delay"):
+            delay = arg
     if mType == '0':
         t = threading.Thread(target=workerNormal, args = (10,number,))
         t.start()
@@ -103,6 +106,7 @@ def workerNmap(number):
         _file.write(strRun + '\n')
         _file.close()
         os.system(strRun)
+        time.sleep(delay)
 def workerPing(number):
     ran = random.randint(10,20)
     response = "ping -c " + str(ran) + " " + random.choice(config.ipList)
@@ -111,7 +115,7 @@ def workerPing(number):
     _file.close()
     os.system(response)
 def workerNormal(num,number):
-    for x in range(10,10+num):
+    for x in range(1,5):
         p1 = 'curl -A "' +   random.choice(config.userAgent) + '" ' + random.choice(config.urlDKHC)
         p2 = 'curl -A "' +   random.choice(config.userAgent) + '" ' + random.choice(config.urlOneShop)
         p3 = 'curl -A "' +   random.choice(config.userAgent) + '" ' + random.choice(config.urlNoiThat)
@@ -125,6 +129,7 @@ def workerNormal(num,number):
         subprocess.Popen(p3, shell=True)
         t = threading.Thread(target=workerWeb)
         t.start()
+        time.sleep(delay)
 
 def workerFTP(number):
     strRun = 'curl ftp://'+ random.choice(config.ipList) + ' --user cnsc:123456'
@@ -134,6 +139,7 @@ def workerFTP(number):
         _file.write(strRun + '\n')
         _file.close()
         os.system(strRun)
+        time.sleep(delay)
     
         
 def workerWeb(number):  
@@ -152,6 +158,7 @@ def workerWebDos(number):
         _file.write(strRun + '\n')
         _file.close()
         os.system(strRun)
+        time.sleep(delay)
 def workerSqlmap(number):
     _file = open('traffic'+str(number)+'.txt','a')
     strRun = "python /web/sqlmap/sqlmap.py -u '"+ random.choice(config.urlDKHC) +"'  --risk=3 --level=5 --batch"
@@ -161,7 +168,7 @@ def workerSqlmap(number):
     time.sleep(10)
     p.kill()
 def workerDns(number):
-    for x in range(random.randint(10,20)):
+    for x in range(random.randint(5,10)):
         n1 = "nslookup -type=any " + random.choice(config.urlDNS)
         n2 = "nslookup -type=any " + random.choice(config.ipDNS)
         _file = open('traffic'+str(number)+'.txt','a')
@@ -170,6 +177,7 @@ def workerDns(number):
         _file.close()    
         os.system(n1)
         os.system(n2)
+        time.sleep(delay)
 
 if __name__ == "__main__":
    main(sys.argv[1:])

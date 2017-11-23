@@ -4,7 +4,7 @@ import random
 import time
 import control
 
-for x in range(1,10):
+#for x in range(1,10):
         #os.system('docker start ubuntu'+ str(x))
 i = 0 
 while True:
@@ -24,9 +24,9 @@ while True:
                 for x in range(0,sl):
                         m = random.randint(1,9)
                         print 'RUN Ubuntu' +str(m)
-                        tRun = 'docker exec -i -t -d ubuntu' + str(m) + ' bash -c ' + str("'") + "python /web/traffic.py --type " + str(_type) + " --hours " + str(hours) + " --worker " + str(work)  + " --number " + str(number)  + str("'")
+                        tRun = 'docker exec -i -t -d ubuntu' + str(m) + ' bash -c ' + str("'") + "python /web/traffic.py --type " + str(_type) + " --hours " + str(hours) + " --worker " + str(work)  + " --number " + str(number) + " --delay " + str(random.choice(control.delay)) + str("'")
                         _file.write(tRun + '\n')
-                        os.system(tRun)
+                        #os.system(tRun)
                 _file.close()
                 time.sleep(hours)
         time.sleep(2)

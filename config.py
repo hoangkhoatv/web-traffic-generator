@@ -76,7 +76,6 @@ urlDKHC = [
 	"http://dangkyhochieu.dientap.cnsc/egov/hoidap.html",
 	"http://dangkyhochieu.dientap.cnsc/egov/php/login.php",
 	"http://dangkyhochieu.dientap.cnsc/egov/php/create_captcha.php",
-	"http://noithat.dientap.cnsc/index.html"
     ]
 
 urlDNS = [

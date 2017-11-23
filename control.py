@@ -22,3 +22,8 @@ status = 1
 #Tat mo may control
 # 0: Tat
 # 1: Mo
+delay = [
+    1,
+    2,
+    3
+]
