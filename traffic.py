@@ -12,7 +12,7 @@ import time
 
 
 def main(argv):
-    global nameFile = ''
+    global nameFile
     ipfile = config.rootURLs
     addressfile = config.userAgent
     mType = ""
