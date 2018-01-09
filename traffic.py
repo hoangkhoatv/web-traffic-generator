@@ -102,7 +102,7 @@ def workerNmap(number,delay):
             strRun = "nmap –vv –sA " + ip
         else:
             strRun = "nmap –vv –sP " + ip
-        _file = open('traffic'+str(number)+'.txt','a')
+        _file = open('/web/traffic/traffic'+str(number)+'.txt','a')
         _file.write(strRun + '\n')
         _file.write(str(delay) + '\n')
         _file.close()
