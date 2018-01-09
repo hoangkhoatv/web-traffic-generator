@@ -1,0 +1,11 @@
+40
+9
+docker exec -i -t -d ubuntu2 bash -c 'python /web/traffic_file.py --type 0 --hours 40 --worker 0 --number 1 --delay 5 --file ubuntu2'
+docker exec -i -t -d ubuntu2 bash -c 'python /web/traffic_file.py --type 0 --hours 40 --worker 0 --number 1 --delay 15 --file ubuntu2'
+docker exec -i -t -d ubuntu8 bash -c 'python /web/traffic_file.py --type 0 --hours 40 --worker 0 --number 1 --delay 10 --file ubuntu8'
+docker exec -i -t -d ubuntu5 bash -c 'python /web/traffic_file.py --type 0 --hours 40 --worker 0 --number 1 --delay 5 --file ubuntu5'
+docker exec -i -t -d ubuntu5 bash -c 'python /web/traffic_file.py --type 0 --hours 40 --worker 0 --number 1 --delay 10 --file ubuntu5'
+docker exec -i -t -d ubuntu9 bash -c 'python /web/traffic_file.py --type 0 --hours 40 --worker 0 --number 1 --delay 5 --file ubuntu9'
+docker exec -i -t -d ubuntu1 bash -c 'python /web/traffic_file.py --type 0 --hours 40 --worker 0 --number 1 --delay 10 --file ubuntu1'
+docker exec -i -t -d ubuntu5 bash -c 'python /web/traffic_file.py --type 0 --hours 40 --worker 0 --number 1 --delay 5 --file ubuntu5'
+docker exec -i -t -d ubuntu4 bash -c 'python /web/traffic_file.py --type 0 --hours 40 --worker 0 --number 1 --delay 20 --file ubuntu4'
