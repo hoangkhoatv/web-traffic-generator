@@ -108,20 +108,22 @@ def workerNmap(number,delay):
         _file.close()
         os.system(strRun)
         time.sleep(str(delay))
+
 def workerPing(number,delay):
     ran = random.randint(10,20)
     response = "ping -c " + str(ran) + " " + random.choice(config.ipList)
-    _file = open('traffic'+str(number)+'.txt','a')
+    _file = open('/web/traffic/traffic'+str(number)+'.txt','a')
     _file.write(response + '\n')
     _file.write(str(delay) + '\n')
     _file.close()
     os.system(response)
+
 def workerNormal(num,number,delay):
     for x in range(1,10):
         p1 = 'curl -A "' +   random.choice(config.userAgent) + '" ' + random.choice(config.urlDKHC)
         p2 = 'curl -A "' +   random.choice(config.userAgent) + '" ' + random.choice(config.urlOneShop)
         p3 = 'curl -A "' +   random.choice(config.userAgent) + '" ' + random.choice(config.urlNoiThat)
-        _file = open('traffic'+str(number)+'.txt','a')
+        _file = open('/web/traffic/traffic'+str(number)+'.txt','a')
         _file.write(p1 + '\n')
         _file.write(str(delay) + '\n')
         _file.write(p2 + '\n')
@@ -141,7 +143,7 @@ def workerFTP(number,delay):
     strRun = 'curl ftp://'+ random.choice(config.ipList) + ' --user cnsc:123456'
     ran = random.randint(1,10)
     for x in range(0, ran):
-        _file = open('traffic'+str(number)+'.txt','a')
+        _file = open('/web/traffic/traffic'+str(number)+'.txt','a')
         _file.write(strRun + '\n')
         _file.write(str(delay) + '\n')
         _file.close()
@@ -152,7 +154,7 @@ def workerFTP(number,delay):
 def workerWeb(number,delay):  
     cmnd = random.randint(100000000,999999999)
     strRun = 'python /web/dos.py ' + str(cmnd) + ' ' + str(cmnd)
-    _file = open('traffic'+str(number)+'.txt','a')
+    _file = open('/web/traffic/traffic'+str(number)+'.txt','a')
     _file.write(strRun + '\n')
     _file.write(str(delay) + '\n')
     _file.close()
@@ -162,14 +164,14 @@ def workerWebDos(number,delay):
     cmnd = random.randint(100000000,999999999)
     for x in range(0,random.randint(10,20)):
         strRun = 'python /web/dos.py ' + str(cmnd) + ' ' + str(cmnd + x)
-        _file = open('traffic'+str(number)+'.txt','a')
+        _file = open('/web/traffic/traffic'+str(number)+'.txt','a')
         _file.write(strRun + '\n')
         _file.write(str(delay) + '\n')
         _file.close()
         os.system(strRun)
         time.sleep(float(delay))
 def workerSqlmap(number,delay):
-    _file = open('traffic'+str(number)+'.txt','a')
+    _file = open('/web/traffic/traffic'+str(number)+'.txt','a')
     strRun = "python /web/sqlmap/sqlmap.py -u '"+ random.choice(config.urlDKHC) +"'  --risk=3 --level=5 --batch"
     _file.write(strRun + '\n')
     _file.write(str(delay) + '\n')
