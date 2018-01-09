@@ -10,8 +10,9 @@ import config
 import subprocess
 import time
 
-nameFile = ''
+
 def main(argv):
+    global nameFile = ''
     ipfile = config.rootURLs
     addressfile = config.userAgent
     mType = ""
