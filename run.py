@@ -24,7 +24,7 @@ while True:
                 for x in range(0,sl):
                         m = random.randint(1,9)
                         print 'RUN Ubuntu' +str(m)
-                        tRun = 'docker exec -i -t -d ubuntu' + str(m) + ' bash -c ' + str("'") + "python /web/traffic.py --type " + str(_type) + " --hours " + str(hours) + " --worker " + str(work)  + " --number " + str(number) + " --delay " + str(random.choice(control.delay)) + str("'")
+                        tRun = 'docker exec -i -t -d ubuntu' + str(m) + ' bash -c ' + str("'") + "python /web/traffic.py --type " + str(_type) + " --hours " + str(hours) + " --worker " + str(work)  + " --number " + str(number) + " --delay " + str(random.choice(control.delay)) + " --file ubuntu" + str(m)+ str("'")
                         tFile = 'docker exec -i -t -d ubuntu' + str(m) + ' bash -c ' + str("'") + "python /web/traffic_file.py --type " + str(_type) + " --hours " + str(hours) + " --worker " + str(work)  + " --number " + str(number) + " --delay " + str(random.choice(control.delay)) + str("'")
                         _file.write(tFile + '\n')
                         os.system(tRun)

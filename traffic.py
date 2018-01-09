@@ -12,6 +12,7 @@ import time
 
 
 def main(argv):
+    nameFile = ''
     ipfile = config.rootURLs
     addressfile = config.userAgent
     mType = ""
@@ -23,7 +24,7 @@ def main(argv):
     if os.path.exists("sqlmap") == False:
         os.system("git clone https://github.com/sqlmapproject/sqlmap.git")
     try:
-        opts, args = getopt.getopt(argv,"hc:t:w:n:d",["type=","hours=","worker=","number=","delay="])
+        opts, args = getopt.getopt(argv,"hc:t:w:n:d:f",["type=","hours=","worker=","number=","delay=","file="])
     except getopt.GetoptError:
         print 'traffic.py -c typeTraffic -t timeGenerate '
         sys.exit(2)
@@ -41,6 +42,8 @@ def main(argv):
             number = arg
         elif opt in ("-d", "--delay"):
             delay = arg
+        elif opt in ("-f", "--file"):
+            nameFile = arg
     if mType == '0':
         t = threading.Thread(target=workerNormal, args = (10,number,delay,))
         t.start()
@@ -110,20 +113,22 @@ def workerNmap(number,delay):
         time.sleep(str(delay))
 
 def workerPing(number,delay):
+    global nameFile
     ran = random.randint(10,20)
     response = "ping -c " + str(ran) + " " + random.choice(config.ipList)
-    _file = open('/web/traffic/traffic'+str(number)+'.txt','a')
+    _file = open('/web/traffic/'+nameFile+str(number)+'.txt','a')
     _file.write(response + '\n')
     _file.write(str(delay) + '\n')
     _file.close()
     os.system(response)
 
 def workerNormal(num,number,delay):
+    global nameFile
     for x in range(1,10):
         p1 = 'curl -A "' +   random.choice(config.userAgent) + '" ' + random.choice(config.urlDKHC)
         p2 = 'curl -A "' +   random.choice(config.userAgent) + '" ' + random.choice(config.urlOneShop)
         p3 = 'curl -A "' +   random.choice(config.userAgent) + '" ' + random.choice(config.urlNoiThat)
-        _file = open('/web/traffic/traffic'+str(number)+'.txt','a')
+        _file = open('/web/traffic/'+nameFile+str(number)+'.txt','a')
         _file.write(p1 + '\n')
         _file.write(str(delay) + '\n')
         _file.write(p2 + '\n')
@@ -140,10 +145,11 @@ def workerNormal(num,number,delay):
         workerWeb(number,delay)
 
 def workerFTP(number,delay):
+    global nameFile
     strRun = 'curl ftp://'+ random.choice(config.ipList) + ' --user cnsc:123456'
     ran = random.randint(1,10)
     for x in range(0, ran):
-        _file = open('/web/traffic/traffic'+str(number)+'.txt','a')
+        _file = open('/web/traffic/'+nameFile+str(number)+'.txt','a')
         _file.write(strRun + '\n')
         _file.write(str(delay) + '\n')
         _file.close()
@@ -152,26 +158,29 @@ def workerFTP(number,delay):
     
         
 def workerWeb(number,delay):  
+    global nameFile
     cmnd = random.randint(100000000,999999999)
     strRun = 'python /web/dos.py ' + str(cmnd) + ' ' + str(cmnd)
-    _file = open('/web/traffic/traffic'+str(number)+'.txt','a')
+    _file = open('/web/traffic/'+nameFile+str(number)+'.txt','a')
     _file.write(strRun + '\n')
     _file.write(str(delay) + '\n')
     _file.close()
     os.system(strRun)
 
-def workerWebDos(number,delay):  
+def workerWebDos(number,delay):
+    global nameFile
     cmnd = random.randint(100000000,999999999)
     for x in range(0,random.randint(10,20)):
         strRun = 'python /web/dos.py ' + str(cmnd) + ' ' + str(cmnd + x)
-        _file = open('/web/traffic/traffic'+str(number)+'.txt','a')
+        _file = open('/web/traffic/'+nameFile+str(number)+'.txt','a')
         _file.write(strRun + '\n')
         _file.write(str(delay) + '\n')
         _file.close()
         os.system(strRun)
         time.sleep(float(delay))
 def workerSqlmap(number,delay):
-    _file = open('/web/traffic/traffic'+str(number)+'.txt','a')
+    global nameFile
+    _file = open('/web/traffic/'+nameFile+str(number)+'.txt','a')
     strRun = "python /web/sqlmap/sqlmap.py -u '"+ random.choice(config.urlDKHC) +"'  --risk=3 --level=5 --batch"
     _file.write(strRun + '\n')
     _file.write(str(delay) + '\n')
@@ -180,10 +189,11 @@ def workerSqlmap(number,delay):
     time.sleep(float(delay))
     p.kill()
 def workerDns(number,delay):
+    global nameFile
     for x in range(random.randint(1,10)):
         n1 = "nslookup -type=any " + random.choice(config.urlDNS)
         n2 = "nslookup -type=any " + random.choice(config.ipDNS)
-        _file = open('traffic'+str(number)+'.txt','a')
+        _file = open('/web/traffic/'+nameFile+str(number)+'.txt','a')
         _file.write(n1 + '\n')
         _file.write(str(delay) + '\n')
         _file.write(n2 + '\n')
