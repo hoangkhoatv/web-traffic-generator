@@ -48,3 +48,6 @@ def main(argv):
             _fileRun.close
             break
         time.sleep(_time)
+
+if __name__ == "__main__":
+   main(sys.argv[1:])
