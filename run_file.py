@@ -1,8 +1,8 @@
 #!/usr/bin/python
 import os
 import time
-_nameRun = 'run.txt'
-_nameTraffic = 'traffic'
+import configFile
+_nameRun = "/web/"+configFile.fileRun+'.txt'
 i = 0
 _fileRun = open(_nameRun,'r')
 while True:
@@ -14,5 +14,6 @@ while True:
     ran = int(_number.strip())
     for x in range(0,ran):
         print _fileRun.readline()
-        #os.system(_fileRun.readline())
+        os.system(_fileRun.readline())
+    time.sleep(_time)
 
