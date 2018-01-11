@@ -1,0 +1,64 @@
+python /web/dos.py 969502105 969502105
+15
+curl -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) " http://dangkyhochieu.dientap.cnsc/egov/hoidap.html
+15
+curl -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.246" http://oneshop.dientap.cnsc/index.php/free-extensions/form-builder?tmpl=component&amp;print=1&amp;page=
+15
+curl -A "Mozilla/5.0 (CrKey armv7l 1.5.16041) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.0 Safari/537.36" http://noithat.dientap.cnsc
+15
+python /web/dos.py 969502105 969502106
+15
+python /web/dos.py 969502105 969502107
+15
+python /web/dos.py 614732967 614732967
+15
+curl -A "Mozilla/5.0 (CrKey armv7l 1.5.16041) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.0 Safari/537.36" http://dangkyhochieu.dientap.cnsc/egov/register.html
+15
+curl -A "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)" http://oneshop.dientap.cnsc/index.php/docs-support?tmpl=component&amp;print=1&amp;page=
+15
+curl -A "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)" http://noithat.dientap.cnsc
+15
+python /web/dos.py 969502105 969502108
+15
+python /web/dos.py 969502105 969502109
+15
+python /web/dos.py 969502105 969502110
+15
+python /web/dos.py 414608626 414608626
+15
+curl -A "Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; Xbox; Xbox One) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Mobile Safari/537.36 Edge/13.10586" http://dangkyhochieu.dientap.cnsc/egov/hoidap.html
+15
+curl -A "Mozilla/5.0 (CrKey armv7l 1.5.16041) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.0 Safari/537.36" http://oneshop.dientap.cnsc/index.php/layout/left-center-right
+15
+curl -A "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36" http://noithat.dientap.cnsc/contact.html
+15
+python /web/dos.py 969502105 969502111
+15
+python /web/dos.py 969502105 969502112
+15
+python /web/dos.py 969502105 969502113
+15
+python /web/dos.py 878147200 878147200
+15
+curl -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.75.14 (KHTML, like Gecko) Version/7.0.3 Safari/7046A194A" http://dangkyhochieu.dientap.cnsc/egov/php/create_captcha.php
+15
+curl -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) " http://oneshop.dientap.cnsc/index.php/layout/main-content-only?tmpl=component&amp;print=1&amp;page=
+15
+curl -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) " http://noithat.dientap.cnsc/about.html
+15
+python /web/dos.py 969502105 969502114
+15
+python /web/dos.py 969502105 969502115
+15
+python /web/dos.py 969502105 969502116
+15
+python /web/dos.py 167759359 167759359
+15
+curl -A "Mozilla/5.0 (CrKey armv7l 1.5.16041) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.0 Safari/537.36" http://dangkyhochieu.dientap.cnsc/egov/check.html
+15
+curl -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) " http://oneshop.dientap.cnsc/index.php/docs-support
+15
+curl -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.75.14 (KHTML, like Gecko) Version/7.0.3 Safari/7046A194A" http://noithat.dientap.cnsc/contact.html
+15
+python /web/dos.py 969502105 969502117
+15

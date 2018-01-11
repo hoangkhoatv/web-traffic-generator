@@ -1,0 +1,88 @@
+40
+9
+docker exec -i -t -d ubuntu3 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 1 --delay 10 --file ubuntu3'
+docker exec -i -t -d ubuntu3 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 1 --delay 20 --file ubuntu3'
+docker exec -i -t -d ubuntu4 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 1 --delay 20 --file ubuntu4'
+docker exec -i -t -d ubuntu1 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 1 --delay 10 --file ubuntu1'
+docker exec -i -t -d ubuntu1 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 1 --delay 20 --file ubuntu1'
+docker exec -i -t -d ubuntu5 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 1 --delay 20 --file ubuntu5'
+docker exec -i -t -d ubuntu3 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 1 --delay 15 --file ubuntu3'
+docker exec -i -t -d ubuntu4 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 1 --delay 10 --file ubuntu4'
+docker exec -i -t -d ubuntu5 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 1 --delay 5 --file ubuntu5'
+40
+9
+docker exec -i -t -d ubuntu8 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 2 --delay 5 --file ubuntu8'
+docker exec -i -t -d ubuntu2 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 2 --delay 5 --file ubuntu2'
+docker exec -i -t -d ubuntu6 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 2 --delay 15 --file ubuntu6'
+docker exec -i -t -d ubuntu7 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 2 --delay 20 --file ubuntu7'
+docker exec -i -t -d ubuntu5 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 2 --delay 15 --file ubuntu5'
+docker exec -i -t -d ubuntu5 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 2 --delay 15 --file ubuntu5'
+docker exec -i -t -d ubuntu3 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 2 --delay 15 --file ubuntu3'
+docker exec -i -t -d ubuntu5 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 2 --delay 5 --file ubuntu5'
+docker exec -i -t -d ubuntu6 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 2 --delay 15 --file ubuntu6'
+40
+9
+docker exec -i -t -d ubuntu2 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 3 --delay 5 --file ubuntu2'
+docker exec -i -t -d ubuntu3 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 3 --delay 20 --file ubuntu3'
+docker exec -i -t -d ubuntu9 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 3 --delay 15 --file ubuntu9'
+docker exec -i -t -d ubuntu2 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 3 --delay 20 --file ubuntu2'
+docker exec -i -t -d ubuntu6 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 3 --delay 5 --file ubuntu6'
+docker exec -i -t -d ubuntu5 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 3 --delay 10 --file ubuntu5'
+docker exec -i -t -d ubuntu2 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 3 --delay 10 --file ubuntu2'
+docker exec -i -t -d ubuntu7 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 3 --delay 20 --file ubuntu7'
+docker exec -i -t -d ubuntu6 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 3 --delay 10 --file ubuntu6'
+40
+9
+docker exec -i -t -d ubuntu6 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 4 --delay 5 --file ubuntu6'
+docker exec -i -t -d ubuntu9 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 4 --delay 15 --file ubuntu9'
+docker exec -i -t -d ubuntu7 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 4 --delay 10 --file ubuntu7'
+docker exec -i -t -d ubuntu1 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 4 --delay 15 --file ubuntu1'
+docker exec -i -t -d ubuntu4 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 4 --delay 15 --file ubuntu4'
+docker exec -i -t -d ubuntu8 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 4 --delay 15 --file ubuntu8'
+docker exec -i -t -d ubuntu8 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 4 --delay 15 --file ubuntu8'
+docker exec -i -t -d ubuntu2 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 4 --delay 10 --file ubuntu2'
+docker exec -i -t -d ubuntu8 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 4 --delay 10 --file ubuntu8'
+40
+9
+docker exec -i -t -d ubuntu9 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 5 --delay 15 --file ubuntu9'
+docker exec -i -t -d ubuntu4 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 5 --delay 20 --file ubuntu4'
+docker exec -i -t -d ubuntu3 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 5 --delay 5 --file ubuntu3'
+docker exec -i -t -d ubuntu5 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 5 --delay 20 --file ubuntu5'
+docker exec -i -t -d ubuntu4 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 5 --delay 20 --file ubuntu4'
+docker exec -i -t -d ubuntu5 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 5 --delay 20 --file ubuntu5'
+docker exec -i -t -d ubuntu2 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 5 --delay 5 --file ubuntu2'
+docker exec -i -t -d ubuntu9 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 5 --delay 10 --file ubuntu9'
+docker exec -i -t -d ubuntu7 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 5 --delay 20 --file ubuntu7'
+40
+9
+docker exec -i -t -d ubuntu3 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 6 --delay 20 --file ubuntu3'
+docker exec -i -t -d ubuntu3 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 6 --delay 10 --file ubuntu3'
+docker exec -i -t -d ubuntu3 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 6 --delay 5 --file ubuntu3'
+docker exec -i -t -d ubuntu1 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 6 --delay 10 --file ubuntu1'
+docker exec -i -t -d ubuntu8 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 6 --delay 15 --file ubuntu8'
+docker exec -i -t -d ubuntu9 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 6 --delay 5 --file ubuntu9'
+docker exec -i -t -d ubuntu3 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 6 --delay 10 --file ubuntu3'
+docker exec -i -t -d ubuntu3 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 6 --delay 5 --file ubuntu3'
+docker exec -i -t -d ubuntu8 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 6 --delay 15 --file ubuntu8'
+40
+9
+docker exec -i -t -d ubuntu3 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 7 --delay 20 --file ubuntu3'
+docker exec -i -t -d ubuntu1 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 7 --delay 20 --file ubuntu1'
+docker exec -i -t -d ubuntu6 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 7 --delay 15 --file ubuntu6'
+docker exec -i -t -d ubuntu2 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 7 --delay 5 --file ubuntu2'
+docker exec -i -t -d ubuntu8 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 7 --delay 20 --file ubuntu8'
+docker exec -i -t -d ubuntu7 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 7 --delay 15 --file ubuntu7'
+docker exec -i -t -d ubuntu3 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 7 --delay 20 --file ubuntu3'
+docker exec -i -t -d ubuntu1 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 7 --delay 15 --file ubuntu1'
+docker exec -i -t -d ubuntu7 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 7 --delay 15 --file ubuntu7'
+40
+9
+docker exec -i -t -d ubuntu7 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 8 --delay 10 --file ubuntu7'
+docker exec -i -t -d ubuntu9 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 8 --delay 20 --file ubuntu9'
+docker exec -i -t -d ubuntu8 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 8 --delay 5 --file ubuntu8'
+docker exec -i -t -d ubuntu1 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 8 --delay 20 --file ubuntu1'
+docker exec -i -t -d ubuntu4 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 8 --delay 20 --file ubuntu4'
+docker exec -i -t -d ubuntu7 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 8 --delay 5 --file ubuntu7'
+docker exec -i -t -d ubuntu9 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 8 --delay 10 --file ubuntu9'
+docker exec -i -t -d ubuntu6 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 8 --delay 15 --file ubuntu6'
+docker exec -i -t -d ubuntu7 bash -c 'python /web/traffic_file.py --type 2 --hours 40 --worker 0 --number 8 --delay 10 --file ubuntu7'
