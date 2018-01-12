@@ -16,6 +16,7 @@ mWorker = 0
 # 4: SQLmap
 # 5: DNS
 # 6: Web
+# 7: Mail
 numberIp = 9
 #So may chay traffic 
 status = 1

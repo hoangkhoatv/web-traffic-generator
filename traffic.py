@@ -50,23 +50,23 @@ def main(argv):
     elif mType == '1':
         t = threading.Thread(target=workerNormal, args = (9,number,delay,))
         t.start()
-        trafficGenerator(0,6,1,number,delay)
+        trafficGenerator(0,7,1,number,delay)
     elif mType == '2':
         t = threading.Thread(target=workerNormal, args = (8,number,delay,))
         t.start()
-        trafficGenerator(0,6,2,number,delay)
+        trafficGenerator(0,7,2,number,delay)
     elif mType == '3':
         t = threading.Thread(target=workerNormal, args = (7,number,delay,))
         t.start()
-        trafficGenerator(0,6,3,number,delay)
+        trafficGenerator(0,7,3,number,delay)
     elif mType == '4':
         t = threading.Thread(target=workerNormal, args = (6,number,delay,))
         t.start()
-        trafficGenerator(0,6,4,number,delay)
+        trafficGenerator(0,7,4,number,delay)
     elif mType == '5':
         t = threading.Thread(target=workerNormal, args = (5,number,delay,))
         t.start()
-        trafficGenerator(0,6,5,number,delay)
+        trafficGenerator(0,7,5,number,delay)
     elif mType == '6':
         trafficGenerator(int(numWorker),int(numWorker),10,number,delay)
     
@@ -85,6 +85,8 @@ def trafficGenerator(ranType1,ranType2,num,number,delay):
             t = threading.Thread(target=workerDns, args = (number,delay))
         elif ran == 5:
             t = threading.Thread(target=workerWebDos, args = (number,delay))
+        elif ran == 6:
+            t = threading.Thread(target=workerMail, args = (number,delay))
         t.start()
 
 def workerNmap(number,delay):
