@@ -209,7 +209,7 @@ def workerDns(number,delay):
 def workerMail(number,delay):
     	global nameFile
     	me =  random.choice(config.accMail)
-	you = random.choice(config.accMail)
+	    you = random.choice(config.cnscMail)
     	content = random.choice(config.contentMail)
     	mfile = random.choice(config.listFile)
     	_cmd = 'python /web/sendMail.py --me ' + me + ' --to ' + you + " --content '" + content + "' --file '/web/file/" +mfile + "'"

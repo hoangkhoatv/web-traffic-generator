@@ -6,14 +6,27 @@ from pwn import *
 
 _nameRun = configFile.fileRun+'.txt'
 def connectSSH():
-    s =  ssh(host=configFile.ipHack, user='root',password='Cnsc12345')
-    if s.connected():
-        sh = s.process('/bin/sh', env={'PS1':''})
-        sh.sendline('/home/attacker/'+configFile.kichban+'/run'+' exit')
-        sh.recvall()
-        s.close()
+    if configFile.checkSSH:
+        s =  ssh(host=configFile.ipHack, user='root',password='Cnsc12345')
+        if s.connected():
+            sh = s.process('/bin/sh', env={'PS1':''})
+            sh.sendline('/home/attacker/'+configFile.kichban+'/run;'+' exit')
+            sh.recvall()
+            s.close()
+        else:
+            connectSSH()
     else:
-        connectSSH()
+        time.sleep(float(60))
+        s =  ssh(host=configFile.ipHack, user='root',password='Cnsc12345')
+        if s.connected():
+            sh = s.process('/bin/sh', env={'PS1':''})
+            sh.sendline('echo 1 > /var/www/html/isActtack/'+configFile.kichban+"; exit")
+            sh.recvall()
+            s.close()
+            time.sleep(float(180))
+        else:
+            connectSSH()
+        
 starttime =  time.time()
 finishtime = starttime + configFile.timeRun
 for x in range(1,10):

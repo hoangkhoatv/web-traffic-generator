@@ -156,7 +156,22 @@ urlNoiThat = [
 accMail = [
 	'bao@cnsc.com',
 	'han@cnsc.com',
-	'duyn@cnsc.com'
+	'duy@cnsc.com',
+	'nguyenvana@cnsc.com',
+	'nguyenvanb@cnsc.com',
+	'nguyenvanc@cnsc.com'
+]
+cnscMail = [
+	'bao@dientap.cnsc',
+	'han@dientap.cnsc',
+	'duy@dientap.cnsc',
+	'hieu@dientap.cnsc',
+	'khoa@dientap.cnsc',
+	'danh@dientap.cnsc',
+	'hoang@dientap.cnsc',
+	'thth@dientap.cnsc',
+	'thuy@dientap.cnsc',
+	'vuong@dientap.cnsc'
 ]
 contentMail = [
 	'Gui Anh Bang Luong Thang 1',
