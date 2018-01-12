@@ -153,3 +153,20 @@ urlNoiThat = [
     'http://noithat.dientap.cnsc/index.html',
     'http://noithat.dientap.cnsc/about.html'
     ]
+accMail = [
+	'bao@cnsc.com',
+	'han@cnsc.com',
+	'duyn@cnsc.com'
+]
+contentMail = [
+	'Gui Anh Bang Luong Thang 1',
+	'Lam bang dai hoc, toeic, ....'
+	'Thong bao cap nhat the BHYT...'
+]
+
+listFile = [
+	'doc.PDF',
+	'nhac.MP3',
+	'soft.EXE',
+	'uit.JPG'
+]
