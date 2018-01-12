@@ -50,29 +50,30 @@ def main(argv):
     elif mType == '1':
         t = threading.Thread(target=workerNormal, args = (9,number,delay,))
         t.start()
-        trafficGenerator(0,7,1,number,delay)
+        trafficGenerator(0,6,1,number,delay)
     elif mType == '2':
         t = threading.Thread(target=workerNormal, args = (8,number,delay,))
         t.start()
-        trafficGenerator(0,7,2,number,delay)
+        trafficGenerator(0,6,2,number,delay)
     elif mType == '3':
         t = threading.Thread(target=workerNormal, args = (7,number,delay,))
         t.start()
-        trafficGenerator(0,7,3,number,delay)
+        trafficGenerator(0,6,3,number,delay)
     elif mType == '4':
         t = threading.Thread(target=workerNormal, args = (6,number,delay,))
         t.start()
-        trafficGenerator(0,7,4,number,delay)
+        trafficGenerator(0,6,4,number,delay)
     elif mType == '5':
         t = threading.Thread(target=workerNormal, args = (5,number,delay,))
         t.start()
-        trafficGenerator(0,7,5,number,delay)
+        trafficGenerator(0,6,5,number,delay)
     elif mType == '6':
         trafficGenerator(int(numWorker),int(numWorker),10,number,delay)
     
 def trafficGenerator(ranType1,ranType2,num,number,delay):
     for x in range(1,num):
         ran = random.randint(ranType1,ranType2)
+	print ran
         if ran == 0:
             t = threading.Thread(target=workerNmap, args = (number,delay,))
         elif ran == 1:
@@ -206,18 +207,18 @@ def workerDns(number,delay):
         os.system(n2)
         time.sleep(float(delay))
 def workerMail(number,delay):
-    global nameFile
-    me =  random.choice(config.accMail)
+    	global nameFile
+    	me =  random.choice(config.accMail)
 	you = random.choice(config.accMail)
-    content = random.choice(config.contentMail)
-    mfile = random.choice(config.listFile)
-    _cmd = 'python /web/sendMail.py --me ' + me + ' --to ' + you + ' --content ' + content + ' --file /web/file/' +mfile
-    for x in range(0,random.randint(1,20)):
-        os.system(_cmd)
-        _file = open('/web/traffic/'+nameFile+str(number)+'.txt','a')
-        _file.write(_cmd + '\n')
-        _file.write(str(delay) + '\n')
-        time.sleep(float(delay))
+    	content = random.choice(config.contentMail)
+    	mfile = random.choice(config.listFile)
+    	_cmd = 'python /web/sendMail.py --me ' + me + ' --to ' + you + " --content '" + content + "' --file '/web/file/" +mfile + "'"
+    	for x in range(0,random.randint(1,20)):
+        	os.system(_cmd)
+        	_file = open('/web/traffic/'+nameFile+str(number)+'.txt','a')
+        	_file.write(_cmd + '\n')
+        	_file.write(str(delay) + '\n')
+        	time.sleep(float(delay))
 	
 if __name__ == "__main__":
    main(sys.argv[1:])

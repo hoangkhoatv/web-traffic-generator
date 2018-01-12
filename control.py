@@ -1,4 +1,4 @@
-mType = 0
+mType = 6
 # Muc do phun traffic:
 # 0 : Traffic thuong
 # 1 : Thuong 9 - Doc 1
@@ -9,14 +9,14 @@ mType = 0
 # 6 : Traffic worker
 mTime = 40
 # Khoang cach thoi gian moi lan chay tool
-mWorker = 0
-# 1: Nmap
-# 2: Ping
-# 3: FTP
-# 4: SQLmap
-# 5: DNS
-# 6: Web
-# 7: Mail
+mWorker = 6
+# 0: Nmap
+# 1: Ping
+# 2: FTP
+# 3: SQLmap
+# 4: DNS
+# 5: Web
+# 6: Mail
 numberIp = 9
 #So may chay traffic 
 status = 1

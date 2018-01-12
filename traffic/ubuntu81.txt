@@ -1,0 +1,174 @@
+python /web/sendMail.py --me han@cnsc.com --to bao@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/uit.JPG'
+15
+python /web/sendMail.py --me bao@cnsc.com --to bao@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/nhac.MP3'
+15
+python /web/sendMail.py --me duyn@cnsc.com --to bao@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/doc.PDF'
+15
+python /web/sendMail.py --me han@cnsc.com --to han@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/doc.PDF'
+15
+python /web/sendMail.py --me bao@cnsc.com --to duyn@cnsc.com --content Gui Anh Bang Luong Thang 1 --file '/web/file/nhac.MP3'
+15
+python /web/sendMail.py --me han@cnsc.com --to bao@cnsc.com --content Gui Anh Bang Luong Thang 1 --file '/web/file/nhac.MP3'
+15
+python /web/sendMail.py --me duyn@cnsc.com --to han@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/nhac.MP3'
+15
+python /web/sendMail.py --me bao@cnsc.com --to duyn@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/soft.EXE'
+15
+python /web/sendMail.py --me bao@cnsc.com --to bao@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/doc.PDF'
+15
+python /web/sendMail.py --me han@cnsc.com --to bao@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/uit.JPG'
+15
+python /web/sendMail.py --me duyn@cnsc.com --to bao@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/doc.PDF'
+15
+python /web/sendMail.py --me han@cnsc.com --to han@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/doc.PDF'
+15
+python /web/sendMail.py --me bao@cnsc.com --to duyn@cnsc.com --content Gui Anh Bang Luong Thang 1 --file '/web/file/nhac.MP3'
+15
+python /web/sendMail.py --me han@cnsc.com --to bao@cnsc.com --content Gui Anh Bang Luong Thang 1 --file '/web/file/nhac.MP3'
+15
+python /web/sendMail.py --me duyn@cnsc.com --to han@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/nhac.MP3'
+15
+python /web/sendMail.py --me bao@cnsc.com --to duyn@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/soft.EXE'
+15
+python /web/sendMail.py --me bao@cnsc.com --to bao@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/doc.PDF'
+15
+python /web/sendMail.py --me han@cnsc.com --to bao@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/uit.JPG'
+15
+python /web/sendMail.py --me duyn@cnsc.com --to bao@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/doc.PDF'
+15
+python /web/sendMail.py --me han@cnsc.com --to han@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/doc.PDF'
+15
+python /web/sendMail.py --me duyn@cnsc.com --to han@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/nhac.MP3'
+15
+python /web/sendMail.py --me han@cnsc.com --to bao@cnsc.com --content Gui Anh Bang Luong Thang 1 --file '/web/file/nhac.MP3'
+15
+python /web/sendMail.py --me bao@cnsc.com --to duyn@cnsc.com --content Gui Anh Bang Luong Thang 1 --file '/web/file/nhac.MP3'
+15
+python /web/sendMail.py --me bao@cnsc.com --to bao@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/doc.PDF'
+15
+python /web/sendMail.py --me bao@cnsc.com --to duyn@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/soft.EXE'
+15
+python /web/sendMail.py --me han@cnsc.com --to bao@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/uit.JPG'
+15
+python /web/sendMail.py --me bao@cnsc.com --to duyn@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/soft.EXE'
+15
+python /web/sendMail.py --me duyn@cnsc.com --to bao@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/doc.PDF'
+15
+python /web/sendMail.py --me han@cnsc.com --to han@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/doc.PDF'
+15
+python /web/sendMail.py --me bao@cnsc.com --to duyn@cnsc.com --content Gui Anh Bang Luong Thang 1 --file '/web/file/nhac.MP3'
+15
+python /web/sendMail.py --me bao@cnsc.com --to bao@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/doc.PDF'
+15
+python /web/sendMail.py --me duyn@cnsc.com --to han@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/nhac.MP3'
+15
+python /web/sendMail.py --me han@cnsc.com --to bao@cnsc.com --content Gui Anh Bang Luong Thang 1 --file '/web/file/nhac.MP3'
+15
+python /web/sendMail.py --me han@cnsc.com --to bao@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/uit.JPG'
+15
+python /web/sendMail.py --me han@cnsc.com --to han@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/doc.PDF'
+15
+python /web/sendMail.py --me bao@cnsc.com --to duyn@cnsc.com --content Gui Anh Bang Luong Thang 1 --file '/web/file/nhac.MP3'
+15
+python /web/sendMail.py --me duyn@cnsc.com --to bao@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/doc.PDF'
+15
+python /web/sendMail.py --me bao@cnsc.com --to bao@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/doc.PDF'
+15
+python /web/sendMail.py --me duyn@cnsc.com --to han@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/nhac.MP3'
+15
+python /web/sendMail.py --me han@cnsc.com --to bao@cnsc.com --content Gui Anh Bang Luong Thang 1 --file '/web/file/nhac.MP3'
+15
+python /web/sendMail.py --me han@cnsc.com --to bao@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/uit.JPG'
+15
+python /web/sendMail.py --me han@cnsc.com --to han@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/doc.PDF'
+15
+python /web/sendMail.py --me duyn@cnsc.com --to bao@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/doc.PDF'
+15
+python /web/sendMail.py --me bao@cnsc.com --to bao@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/doc.PDF'
+15
+python /web/sendMail.py --me duyn@cnsc.com --to han@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/nhac.MP3'
+15
+python /web/sendMail.py --me han@cnsc.com --to bao@cnsc.com --content Gui Anh Bang Luong Thang 1 --file '/web/file/nhac.MP3'
+15
+python /web/sendMail.py --me han@cnsc.com --to bao@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/uit.JPG'
+15
+python /web/sendMail.py --me han@cnsc.com --to han@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/doc.PDF'
+15
+python /web/sendMail.py --me bao@cnsc.com --to bao@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/doc.PDF'
+15
+python /web/sendMail.py --me duyn@cnsc.com --to bao@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/doc.PDF'
+15
+python /web/sendMail.py --me duyn@cnsc.com --to han@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/nhac.MP3'
+15
+python /web/sendMail.py --me han@cnsc.com --to bao@cnsc.com --content Gui Anh Bang Luong Thang 1 --file '/web/file/nhac.MP3'
+15
+python /web/sendMail.py --me han@cnsc.com --to bao@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/uit.JPG'
+15
+python /web/sendMail.py --me han@cnsc.com --to han@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/doc.PDF'
+15
+python /web/sendMail.py --me duyn@cnsc.com --to bao@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/doc.PDF'
+15
+python /web/sendMail.py --me duyn@cnsc.com --to han@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/nhac.MP3'
+15
+python /web/sendMail.py --me han@cnsc.com --to bao@cnsc.com --content Gui Anh Bang Luong Thang 1 --file '/web/file/nhac.MP3'
+15
+python /web/sendMail.py --me han@cnsc.com --to bao@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/uit.JPG'
+15
+python /web/sendMail.py --me duyn@cnsc.com --to bao@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/doc.PDF'
+15
+python /web/sendMail.py --me han@cnsc.com --to bao@cnsc.com --content Gui Anh Bang Luong Thang 1 --file '/web/file/nhac.MP3'
+15
+python /web/sendMail.py --me duyn@cnsc.com --to han@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/nhac.MP3'
+15
+python /web/sendMail.py --me han@cnsc.com --to bao@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/uit.JPG'
+15
+python /web/sendMail.py --me duyn@cnsc.com --to bao@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/doc.PDF'
+15
+python /web/sendMail.py --me duyn@cnsc.com --to han@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/nhac.MP3'
+15
+python /web/sendMail.py --me han@cnsc.com --to bao@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/uit.JPG'
+15
+python /web/sendMail.py --me duyn@cnsc.com --to bao@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/doc.PDF'
+15
+python /web/sendMail.py --me duyn@cnsc.com --to han@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/nhac.MP3'
+15
+python /web/sendMail.py --me han@cnsc.com --to bao@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/uit.JPG'
+15
+python /web/sendMail.py --me duyn@cnsc.com --to bao@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/doc.PDF'
+15
+python /web/sendMail.py --me duyn@cnsc.com --to han@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/nhac.MP3'
+15
+python /web/sendMail.py --me han@cnsc.com --to bao@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/uit.JPG'
+15
+python /web/sendMail.py --me duyn@cnsc.com --to bao@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/doc.PDF'
+15
+python /web/sendMail.py --me duyn@cnsc.com --to han@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/nhac.MP3'
+15
+python /web/sendMail.py --me han@cnsc.com --to bao@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/uit.JPG'
+15
+python /web/sendMail.py --me duyn@cnsc.com --to bao@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/doc.PDF'
+15
+python /web/sendMail.py --me duyn@cnsc.com --to han@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/nhac.MP3'
+15
+python /web/sendMail.py --me han@cnsc.com --to bao@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/uit.JPG'
+15
+python /web/sendMail.py --me duyn@cnsc.com --to bao@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/doc.PDF'
+15
+python /web/sendMail.py --me duyn@cnsc.com --to han@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/nhac.MP3'
+15
+python /web/sendMail.py --me han@cnsc.com --to bao@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/uit.JPG'
+15
+python /web/sendMail.py --me duyn@cnsc.com --to han@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/nhac.MP3'
+15
+python /web/sendMail.py --me han@cnsc.com --to bao@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/uit.JPG'
+15
+python /web/sendMail.py --me duyn@cnsc.com --to han@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/nhac.MP3'
+15
+python /web/sendMail.py --me han@cnsc.com --to bao@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/uit.JPG'
+15
+python /web/sendMail.py --me duyn@cnsc.com --to han@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/nhac.MP3'
+15
+python /web/sendMail.py --me han@cnsc.com --to bao@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/uit.JPG'
+15
+python /web/sendMail.py --me duyn@cnsc.com --to han@cnsc.com --content Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT... --file '/web/file/nhac.MP3'
+15
