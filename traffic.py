@@ -69,7 +69,12 @@ def main(argv):
         trafficGenerator(0,6,5,number,delay)
     elif mType == '6':
         trafficGenerator(int(numWorker),int(numWorker),10,number,delay)
-    
+    elif mType == '7':
+        t1 = threading.Thread(target=workerNormal, args = (10,number,delay,))
+        t1.start() 
+        t2 = threading.Thread(target=workerDownload, args = (number,delay))
+        t2.start()
+
 def trafficGenerator(ranType1,ranType2,num,number,delay):
     for x in range(1,num):
         ran = random.randint(ranType1,ranType2)
@@ -218,6 +223,15 @@ def workerMail(number,delay):
         _file.write(_cmd + '\n')
         _file.write(str(delay) + '\n')
         time.sleep(float(delay))
-	
+def workerDownload(number,delay):
+        global nameFile
+        url =  random.choice(config.downloadURL)
+        _cmd = 'curl '+ url + ' --output my.file'
+        os.system(_cmd)
+        _file = open('/web/traffic/'+nameFile+str(number)+'.txt','a')
+        _file.write(_cmd + '\n')
+        _file.write(str(delay) + '\n')
+        os.system('rm my.file')
+        time.sleep(float(delay))	
 if __name__ == "__main__":
    main(sys.argv[1:])
