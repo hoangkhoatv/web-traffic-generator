@@ -218,6 +218,16 @@ def workerMail(number,delay):
         _file.write(_cmd + '\n')
         _file.write(str(delay) + '\n')
         time.sleep(float(delay))
+def workerDownload(number,delay):
+	global nameFile
+	url =  random.choice(config.downloadURL)
+	_cmd = 'curl '+ url + ' --output my.file'
+	os.system(_cmd)
+	_file = open('/web/traffic/'+nameFile+str(number)+'.txt','a')
+        _file.write(_cmd + '\n')
+        _file.write(str(delay) + '\n')
+	os.system('rm my.file')
+        time.sleep(float(delay))
 	
 if __name__ == "__main__":
    main(sys.argv[1:])

@@ -185,3 +185,13 @@ listFile = [
 	'soft.EXE',
 	'uit.JPG'
 ]
+downloadURL = [
+	'http://a.tuviviet.net/v2106xm/2017/12/12/ccleaner.exe',
+	'ftp://cnsc-ftp:Cnsc12345@192.168.77.123/files/download/firefox.exe',
+	'ftp://cnsc-ftp:Cnsc12345@192.168.77.123/files/download/lactroi.mp3',
+	'http://www.e-ptit.edu.vn/hoctap/hoclieu/TTHCM.pdf',
+	'http://ftp.vim.org/graphics/blender/demo/movies/ton_bug_1999.mpg',
+	'ftp://cnsc-ftp:Cnsc12345@192.168.77.123/files/download/cnsc.mp4',
+	'https://suctremmt.com/stcloud/uploads/2017/12/cnsc-1.jpg'
+
+]
