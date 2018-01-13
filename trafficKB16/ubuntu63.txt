@@ -1,0 +1,22 @@
+curl -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) " http://dangkyhochieu.dientap.cnsc/egov/index.html
+20
+curl -A "Mozilla/5.0 (CrKey armv7l 1.5.16041) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.0 Safari/537.36" http://oneshop.dientap.cnsc/index.php/product-tour?tmpl=component&amp;print=1&amp;page=
+20
+curl -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.246" http://noithat.dientap.cnsc/index.html
+20
+python /web/dos.py 613275418 613275418
+20
+curl -A "Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; Xbox; Xbox One) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Mobile Safari/537.36 Edge/13.10586" http://dangkyhochieu.dientap.cnsc/egov/register.html
+20
+curl -A "Mozilla/5.0 (Linux; Android 6.0.1; SM-G920V Build/MMB29K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.98 Mobile Safari/537.36" http://oneshop.dientap.cnsc/index.php/layout/left-center-right
+20
+curl -A "Mozilla/5.0 (CrKey armv7l 1.5.16041) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.0 Safari/537.36" http://noithat.dientap.cnsc/about.html
+20
+python /web/dos.py 459192563 459192563
+20
+curl -A "Mozilla/5.0 (CrKey armv7l 1.5.16041) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.0 Safari/537.36" http://dangkyhochieu.dientap.cnsc/egov/php/create_captcha.php
+20
+curl -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.246" http://oneshop.dientap.cnsc/index.php/menu-styles?tmpl=component&amp;print=1&amp;page=
+20
+curl -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) " http://noithat.dientap.cnsc/about.html
+20

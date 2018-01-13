@@ -47,7 +47,7 @@ def main(argv):
         if _time == '':
             _fileRun.close
             break
-        time.sleep(_time)
+        time.sleep(float(_time))
 
 if __name__ == "__main__":
    main(sys.argv[1:])

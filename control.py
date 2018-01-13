@@ -1,4 +1,4 @@
-mType = 6
+mType = 0
 # Muc do phun traffic:
 # 0 : Traffic thuong
 # 1 : Thuong 9 - Doc 1
@@ -17,15 +17,15 @@ mWorker = 6
 # 4: DNS
 # 5: Web
 # 6: Mail
-numberIp = 9
+numberIp = 5
 #So may chay traffic 
 status = 1
 #Tat mo may control
 # 0: Tat
 # 1: Mo
 delay = [
-    5,
     10,
     15,
-    20
+    20,
+    30
 ]

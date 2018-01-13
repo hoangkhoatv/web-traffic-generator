@@ -1,0 +1,18 @@
+python /web/sendMail.py --me duy@cnsc.com --to thuy@dientap.cnsc --content 'Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT...' --file '/web/file/uit.JPG'
+10
+python /web/sendMail.py --me duy@cnsc.com --to bao@dientap.cnsc --content 'Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT...' --file '/web/file/uit.JPG'
+10
+python /web/sendMail.py --me duy@cnsc.com --to thuy@dientap.cnsc --content 'Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT...' --file '/web/file/doc.PDF'
+10
+python /web/sendMail.py --me bao@cnsc.com --to bao@dientap.cnsc --content 'Gui Anh Bang Luong Thang 1' --file '/web/file/doc.PDF'
+10
+python /web/sendMail.py --me bao@cnsc.com --to hoang@dientap.cnsc --content 'Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT...' --file '/web/file/doc.PDF'
+10
+python /web/sendMail.py --me duy@cnsc.com --to thuy@dientap.cnsc --content 'Gui Anh Bang Luong Thang 1' --file '/web/file/soft.EXE'
+10
+python /web/sendMail.py --me han@cnsc.com --to duy@dientap.cnsc --content 'Gui Anh Bang Luong Thang 1' --file '/web/file/soft.EXE'
+10
+python /web/sendMail.py --me bao@cnsc.com --to bao@dientap.cnsc --content 'Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT...' --file '/web/file/soft.EXE'
+10
+python /web/sendMail.py --me nguyenvanc@cnsc.com --to duy@dientap.cnsc --content 'Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT...' --file '/web/file/soft.EXE'
+10

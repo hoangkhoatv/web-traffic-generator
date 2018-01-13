@@ -1,0 +1,6 @@
+curl -A "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36" http://dangkyhochieu.dientap.cnsc/egov/php/create_captcha.php
+20
+curl -A "Mozilla/5.0 (Linux; Android 6.0.1; SM-G920V Build/MMB29K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.98 Mobile Safari/537.36" http://oneshop.dientap.cnsc/index.php/free-extensions/form-builder?tmpl=component&amp;print=1&amp;page=
+20
+curl -A "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)" http://noithat.dientap.cnsc/about.html
+20

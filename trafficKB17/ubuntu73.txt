@@ -1,0 +1,22 @@
+curl -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.75.14 (KHTML, like Gecko) Version/7.0.3 Safari/7046A194A" http://dangkyhochieu.dientap.cnsc/egov/index.html
+20
+curl -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.246" http://oneshop.dientap.cnsc/index.php/layout/innerleft--center--right?tmpl=component&amp;print=1&amp;page=
+20
+curl -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.75.14 (KHTML, like Gecko) Version/7.0.3 Safari/7046A194A" http://noithat.dientap.cnsc/about.html
+20
+python /web/dos.py 589226753 589226753
+20
+curl -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.75.14 (KHTML, like Gecko) Version/7.0.3 Safari/7046A194A" http://dangkyhochieu.dientap.cnsc/egov/hoidap.html
+20
+curl -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.246" http://oneshop.dientap.cnsc/index.php/menu-styles/tree-menu
+20
+curl -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) " http://noithat.dientap.cnsc
+20
+python /web/dos.py 427600699 427600699
+20
+curl -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.75.14 (KHTML, like Gecko) Version/7.0.3 Safari/7046A194A" http://dangkyhochieu.dientap.cnsc/egov/index.html
+20
+curl -A "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36" http://oneshop.dientap.cnsc/index.php/menu-styles
+20
+curl -A "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36" http://noithat.dientap.cnsc/contact.html
+20

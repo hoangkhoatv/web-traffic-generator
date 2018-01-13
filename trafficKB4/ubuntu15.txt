@@ -1,0 +1,10 @@
+curl -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) " http://dangkyhochieu.dientap.cnsc/egov/index.html
+30
+curl -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.246" http://oneshop.dientap.cnsc/index.php/image-gallery
+30
+curl -A "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36" http://noithat.dientap.cnsc/about.html
+30
+python /web/dos.py 162068239 162068239
+30
+python /web/dos.py 162068239 162068240
+30

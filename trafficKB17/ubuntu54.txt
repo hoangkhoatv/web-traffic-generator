@@ -1,0 +1,22 @@
+curl -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.75.14 (KHTML, like Gecko) Version/7.0.3 Safari/7046A194A" http://dangkyhochieu.dientap.cnsc/egov/register.html
+10
+curl -A "Mozilla/5.0 (CrKey armv7l 1.5.16041) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.0 Safari/537.36" http://oneshop.dientap.cnsc/index.php/layout/left--innerleft--center
+10
+curl -A "Mozilla/5.0 (CrKey armv7l 1.5.16041) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.0 Safari/537.36" http://noithat.dientap.cnsc
+10
+python /web/dos.py 823186161 823186161
+10
+curl -A "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36" http://dangkyhochieu.dientap.cnsc/egov/check.html
+10
+curl -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.246" http://oneshop.dientap.cnsc/index.php/layout/left--innerleft--center
+10
+curl -A "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36" http://noithat.dientap.cnsc/index.html
+10
+python /web/dos.py 579983525 579983525
+10
+curl -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) " http://dangkyhochieu.dientap.cnsc/egov/php/create_captcha.php
+10
+curl -A "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36" http://oneshop.dientap.cnsc/index.php/menu-styles/tree-menu
+10
+curl -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.246" http://noithat.dientap.cnsc/index.html
+10

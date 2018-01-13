@@ -1,0 +1,14 @@
+curl -A "Mozilla/5.0 (Linux; Android 6.0.1; SM-G920V Build/MMB29K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.98 Mobile Safari/537.36" http://dangkyhochieu.dientap.cnsc/egov/register.html
+20
+curl -A "Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; Xbox; Xbox One) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Mobile Safari/537.36 Edge/13.10586" http://oneshop.dientap.cnsc/index.php/painless-configuration?tmpl=component&amp;print=1&amp;page=
+20
+curl -A "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36" http://noithat.dientap.cnsc
+20
+python /web/dos.py 730640925 730640925
+20
+curl -A "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36" http://dangkyhochieu.dientap.cnsc/egov/hoidap.html
+20
+curl -A "Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; Xbox; Xbox One) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Mobile Safari/537.36 Edge/13.10586" http://oneshop.dientap.cnsc/index.php/layout/innerleft--center--right?tmpl=component&amp;print=1&amp;page=
+20
+curl -A "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)" http://noithat.dientap.cnsc
+20

@@ -1,0 +1,14 @@
+curl -A "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36" http://dangkyhochieu.dientap.cnsc/egov/php/login.php
+30
+curl -A "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36" http://oneshop.dientap.cnsc/index.php/menu-styles/main-menu
+30
+curl -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) " http://noithat.dientap.cnsc/contact.html
+30
+python /web/dos.py 145877089 145877089
+30
+curl -A "Mozilla/5.0 (CrKey armv7l 1.5.16041) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.0 Safari/537.36" http://dangkyhochieu.dientap.cnsc/egov/php/login.php
+30
+curl -A "Mozilla/5.0 (CrKey armv7l 1.5.16041) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.0 Safari/537.36" http://oneshop.dientap.cnsc/index.php/menu-styles?tmpl=component&amp;print=1&amp;page=
+30
+curl -A "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)" http://noithat.dientap.cnsc/index.html
+30

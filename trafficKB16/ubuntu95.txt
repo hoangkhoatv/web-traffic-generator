@@ -1,0 +1,6 @@
+curl -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.75.14 (KHTML, like Gecko) Version/7.0.3 Safari/7046A194A" http://dangkyhochieu.dientap.cnsc/egov/check.html
+20
+curl -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) " http://oneshop.dientap.cnsc/index.php/free-extensions/easy-slider
+20
+curl -A "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)" http://noithat.dientap.cnsc/about.html
+20

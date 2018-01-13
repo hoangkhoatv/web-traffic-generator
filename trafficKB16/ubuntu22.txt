@@ -1,0 +1,40 @@
+python /web/sendMail.py --me duy@cnsc.com --to thuy@dientap.cnsc --content 'Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT...' --file '/web/file/uit.JPG'
+10
+python /web/sendMail.py --me duy@cnsc.com --to bao@dientap.cnsc --content 'Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT...' --file '/web/file/uit.JPG'
+10
+python /web/sendMail.py --me duy@cnsc.com --to thuy@dientap.cnsc --content 'Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT...' --file '/web/file/doc.PDF'
+10
+python /web/sendMail.py --me bao@cnsc.com --to bao@dientap.cnsc --content 'Gui Anh Bang Luong Thang 1' --file '/web/file/doc.PDF'
+10
+python /web/sendMail.py --me bao@cnsc.com --to hoang@dientap.cnsc --content 'Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT...' --file '/web/file/doc.PDF'
+10
+python /web/sendMail.py --me duy@cnsc.com --to thuy@dientap.cnsc --content 'Gui Anh Bang Luong Thang 1' --file '/web/file/soft.EXE'
+10
+python /web/sendMail.py --me han@cnsc.com --to duy@dientap.cnsc --content 'Gui Anh Bang Luong Thang 1' --file '/web/file/soft.EXE'
+10
+python /web/sendMail.py --me bao@cnsc.com --to bao@dientap.cnsc --content 'Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT...' --file '/web/file/soft.EXE'
+10
+python /web/sendMail.py --me nguyenvanc@cnsc.com --to duy@dientap.cnsc --content 'Lam bang dai hoc, toeic, ....Thong bao cap nhat the BHYT...' --file '/web/file/soft.EXE'
+10
+curl -A "Mozilla/5.0 (Linux; Android 6.0.1; SM-G920V Build/MMB29K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.98 Mobile Safari/537.36" http://dangkyhochieu.dientap.cnsc/egov/php/login.php
+30
+curl -A "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)" http://oneshop.dientap.cnsc/index.php/layout
+30
+curl -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.246" http://noithat.dientap.cnsc/contact.html
+30
+python /web/dos.py 805489668 805489668
+30
+curl -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) " http://dangkyhochieu.dientap.cnsc/egov/hoidap.html
+30
+curl -A "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36" http://oneshop.dientap.cnsc/index.php/docs-support?tmpl=component&amp;print=1&amp;page=
+30
+curl -A "Mozilla/5.0 (Linux; Android 6.0.1; SM-G920V Build/MMB29K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.98 Mobile Safari/537.36" http://noithat.dientap.cnsc/about.html
+30
+python /web/dos.py 267285073 267285073
+30
+curl -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.75.14 (KHTML, like Gecko) Version/7.0.3 Safari/7046A194A" http://dangkyhochieu.dientap.cnsc/egov/hoidap.html
+30
+curl -A "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36" http://oneshop.dientap.cnsc/index.php/rtl-support?tmpl=component&amp;print=1&amp;page=
+30
+curl -A "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)" http://noithat.dientap.cnsc/about.html
+30

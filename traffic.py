@@ -209,16 +209,15 @@ def workerDns(number,delay):
 def workerMail(number,delay):
     	global nameFile
     	me =  random.choice(config.accMail)
-	    you = random.choice(config.cnscMail)
+	you = random.choice(config.cnscMail)
     	content = random.choice(config.contentMail)
     	mfile = random.choice(config.listFile)
     	_cmd = 'python /web/sendMail.py --me ' + me + ' --to ' + you + " --content '" + content + "' --file '/web/file/" +mfile + "'"
-    	for x in range(0,random.randint(0,1)):
-        	os.system(_cmd)
-        	_file = open('/web/traffic/'+nameFile+str(number)+'.txt','a')
-        	_file.write(_cmd + '\n')
-        	_file.write(str(delay) + '\n')
-        	time.sleep(float(delay))
+        os.system(_cmd)
+        _file = open('/web/traffic/'+nameFile+str(number)+'.txt','a')
+        _file.write(_cmd + '\n')
+        _file.write(str(delay) + '\n')
+        time.sleep(float(delay))
 	
 if __name__ == "__main__":
    main(sys.argv[1:])

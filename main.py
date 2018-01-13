@@ -34,7 +34,7 @@ if len(sys.argv) != 2:
     sys.exit()
 else:
     input_file = sys.argv[1]
-    output_file = "out.jpg"
+    output_file = "/out.jpg"
 
 if not os.path.isfile(input_file):
     print "No such file '%s'" % input_file
@@ -209,7 +209,7 @@ red_edges = cv2.Canny(red, 200, 250)
 edges = blue_edges | green_edges | red_edges
 
 # Find the contours
-_,contours, hierarchy = cv2.findContours(edges.copy(), cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)
+contours, hierarchy = cv2.findContours(edges.copy(), cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)
 
 hierarchy = hierarchy[0]
 
@@ -317,8 +317,8 @@ for index_, (contour_, box) in enumerate(keepers):
 new_image = cv2.blur(new_image, (2, 2))
 cv2.imwrite(output_file, new_image)
 if DEBUG:
-    cv2.imwrite('edges.png', edges)
-    cv2.imwrite('processed.png', processed)
-    cv2.imwrite('rejected.png', rejected)
+    cv2.imwrite('/edges.png', edges)
+    cv2.imwrite('/processed.png', processed)
+    cv2.imwrite('/rejected.png', rejected)
 #call(["tesseract", "out.jpg", "out"], stdout=FNULL)
-os.system("tesseract out.jpg out > /dev/null 2>&1")
+os.system("tesseract /out.jpg /out > /dev/null 2>&1")

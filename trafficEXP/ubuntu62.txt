@@ -1,0 +1,42 @@
+curl -A "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36" http://dangkyhochieu.dientap.cnsc/egov/hoidap.html
+30
+curl -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) " http://oneshop.dientap.cnsc/index.php/menu-styles/main-menu
+30
+curl -A "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36" http://noithat.dientap.cnsc/contact.html
+30
+python /web/sqlmap/sqlmap.py -u 'http://dangkyhochieu.dientap.cnsc/egov/hoidap.html'  --risk=3 --level=5 --batch
+30
+python /web/sendMail.py --me nguyenvanb@cnsc.com --to hieu@dientap.cnsc --content 'Gui Anh Bang Luong Thang 1' --file '/web/file/doc.PDF'
+30
+python /web/dos.py 307007319 307007319
+30
+curl -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.246" http://dangkyhochieu.dientap.cnsc/egov/register.html
+30
+curl -A "Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; Xbox; Xbox One) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Mobile Safari/537.36 Edge/13.10586" http://oneshop.dientap.cnsc/index.php/layout/left--innerleft--center
+30
+curl -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.75.14 (KHTML, like Gecko) Version/7.0.3 Safari/7046A194A" http://noithat.dientap.cnsc/contact.html
+30
+python /web/dos.py 397232948 397232948
+30
+curl -A "Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; Xbox; Xbox One) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Mobile Safari/537.36 Edge/13.10586" http://dangkyhochieu.dientap.cnsc/egov/index.html
+30
+curl -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) " http://oneshop.dientap.cnsc/index.php/layout?tmpl=component&amp;print=1&amp;page=
+30
+curl -A "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36" http://noithat.dientap.cnsc/contact.html
+30
+python /web/dos.py 616591333 616591333
+30
+curl -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) " http://dangkyhochieu.dientap.cnsc/egov/check.html
+30
+curl -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) " http://oneshop.dientap.cnsc/index.php/free-extensions/easy-slider
+30
+curl -A "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36" http://noithat.dientap.cnsc
+30
+python /web/dos.py 216443376 216443376
+30
+curl -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) " http://dangkyhochieu.dientap.cnsc/egov/register.html
+30
+curl -A "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36" http://oneshop.dientap.cnsc/index.php/layout/innerleft--center--right?tmpl=component&amp;print=1&amp;page=
+30
+curl -A "Mozilla/5.0 (Linux; Android 6.0.1; SM-G920V Build/MMB29K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.98 Mobile Safari/537.36" http://noithat.dientap.cnsc/about.html
+30

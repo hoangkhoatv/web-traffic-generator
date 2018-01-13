@@ -1,0 +1,42 @@
+curl -A "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)" http://dangkyhochieu.dientap.cnsc/egov/php/create_captcha.php
+30
+curl -A "Mozilla/5.0 (CrKey armv7l 1.5.16041) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.0 Safari/537.36" http://oneshop.dientap.cnsc/index.php/layout/main-content-only
+30
+curl -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) " http://noithat.dientap.cnsc/about.html
+30
+curl ftp://192.168.250.253 --user cnsc:123456
+30
+python /web/dos.py 422877765 422877765
+30
+python /web/dos.py 422877765 422877766
+30
+python /web/dos.py 422877765 422877767
+30
+python /web/dos.py 645177302 645177302
+30
+curl -A "Mozilla/5.0 (CrKey armv7l 1.5.16041) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.0 Safari/537.36" http://dangkyhochieu.dientap.cnsc/egov/php/login.php
+30
+curl -A "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)" http://oneshop.dientap.cnsc/index.php/menu-styles
+30
+curl -A "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)" http://noithat.dientap.cnsc
+30
+python /web/dos.py 422877765 422877768
+30
+python /web/dos.py 422877765 422877769
+30
+python /web/dos.py 422877765 422877770
+30
+curl ftp://192.168.250.253 --user cnsc:123456
+30
+python /web/dos.py 366746884 366746884
+30
+curl -A "Mozilla/5.0 (Linux; Android 6.0.1; SM-G920V Build/MMB29K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.98 Mobile Safari/537.36" http://dangkyhochieu.dientap.cnsc/egov/php/login.php
+30
+curl -A "Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; Xbox; Xbox One) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Mobile Safari/537.36 Edge/13.10586" http://oneshop.dientap.cnsc/index.php/painless-configuration?tmpl=component&amp;print=1&amp;page=
+30
+curl -A "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)" http://noithat.dientap.cnsc/contact.html
+30
+python /web/dos.py 422877765 422877771
+30
+python /web/dos.py 422877765 422877772
+30

